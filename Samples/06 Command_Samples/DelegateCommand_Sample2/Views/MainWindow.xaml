@@ -1,0 +1,24 @@
+﻿<Window x:Class="DelegateCommand_Sample2.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DelegateCommand_Sample2.Views" 
+        xmlns:vm="clr-namespace:DelegateCommand_Sample2.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="170" Width="280" FontSize="14" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <!-- Verwendung des ViewModels als DataContext für das gesamte Window -->
+        <vm:MainWindowViewModel /> 
+    </Window.DataContext>
+    <StackPanel>
+        <Label Content="Bitte Namen eingeben:"/>
+        <TextBox TextWrapping="Wrap" Name="myTextBox" 
+                 Text="{Binding YourName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <!-- UpdateSourceTrigger ist nötig, weil TextBox Fokus nicht verlieren kann, solange der Button deaktivert ist und somit YourName nicht upgedated würde -->
+        <Button Command="{Binding SayHelloCommand}">
+            Dann hier klicken
+        </Button>
+        <TextBlock Text="{Binding Message, Mode=TwoWay}" />
+    </StackPanel>
+</Window>

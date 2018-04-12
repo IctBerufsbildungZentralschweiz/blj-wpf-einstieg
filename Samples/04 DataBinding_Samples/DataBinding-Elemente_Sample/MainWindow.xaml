@@ -1,0 +1,29 @@
+﻿<Window x:Class="DataBinding_Elemente_Sample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataBinding_Elemente_Sample"
+        mc:Ignorable="d"
+        Title="Elementbindung" Height="242.65" Width="354.129" FontSize="20" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <local:ColorValueConverter x:Key="myColorConverter" />
+    </Window.Resources>
+    <StackPanel>
+        <TextBox Margin="10" Name="myTextBox" IsReadOnly="True" 
+                 Text="{Binding ElementName=myListBox, Path=SelectedItem.Content}" 
+                 Background="{Binding ElementName=myListBox, Path=SelectedItem.Tag}" /> 
+        
+        <!-- Variante: Color für Hintergrundfarbe über ValueConverter ermitteln 
+        <TextBox Margin="10" Name="myTextBox" IsReadOnly="True" 
+                 Text="{Binding ElementName=myListBox, Path=SelectedItem.Content}" 
+                 Background="{Binding ElementName=myListBox, Path=SelectedItem.Content, Converter={StaticResource myColorConverter}}"/>
+        -->
+        
+        <ListBox Margin="10" Name="myListBox">
+            <ListBoxItem Tag="#ff0000">Rot</ListBoxItem>
+            <ListBoxItem Tag="#00ff00">Grün</ListBoxItem>
+            <ListBoxItem Tag="#0000ff">Blau</ListBoxItem>
+        </ListBox>
+    </StackPanel>
+</Window>

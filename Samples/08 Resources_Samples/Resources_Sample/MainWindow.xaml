@@ -1,0 +1,30 @@
+﻿<Window x:Class="Resources_Sample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Resources_Sample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="221.688" Width="368.103">
+    <!-- Dokument-Ressourcen 
+    -->
+    <Window.Resources>
+        <!-- 
+        <Color x:Key="Farbe1">#ff0000</Color>
+        <SolidColorBrush x:Key="Füllung1" Color="{DynamicResource Farbe1}" />
+        <Color x:Key="Farbe2">#00ff00</Color>
+        <SolidColorBrush x:Key="Füllung2" Color="{DynamicResource Farbe2}" />
+        -->
+    </Window.Resources>
+    <Canvas>
+        <Rectangle Fill="{DynamicResource Füllung1}"  Height="38" Canvas.Left="15" Canvas.Top="11" Width="85"/>
+        <Rectangle Fill="{DynamicResource Füllung2}" Height="38" Canvas.Left="138" Canvas.Top="11" Width="85"/>
+        <Rectangle Fill="#ff0000" Height="38" Canvas.Left="138" Canvas.Top="75" Width="85"/>
+        <Rectangle Fill="#ff0000" Height="38" Canvas.Left="15" Canvas.Top="75" Width="85"/>
+        <Rectangle Fill="#00ff00" Height="38" Canvas.Left="138" Canvas.Top="133" Width="85"/>
+        <Rectangle Fill="#00ff00" Height="38" Canvas.Left="258" Canvas.Top="75" Width="85"/>
+        <Rectangle Fill="#00ff00" Height="38" Canvas.Left="15" Canvas.Top="133" Width="85"/>
+        <Rectangle Fill="{DynamicResource Füllung1}" Height="38" Canvas.Left="258" Canvas.Top="11" Width="85"/>
+        <Rectangle Fill="#ff0000" Height="38" Canvas.Left="258" Canvas.Top="133" Width="85"/>
+    </Canvas>
+</Window>

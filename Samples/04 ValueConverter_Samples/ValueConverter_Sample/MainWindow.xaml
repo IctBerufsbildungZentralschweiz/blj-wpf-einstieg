@@ -1,0 +1,40 @@
+﻿<Window x:Class="ValueConverter_Sample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ValueConverter_Sample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="365.909" Width="525.795">
+    <Window.Resources>
+        <local:SchriftgroesseConverter x:Key="MyConv" />
+    </Window.Resources>
+    <StackPanel>
+        <!-- Variante 1 -->
+        <Label Margin="5">Lösung mit Converter als Ressource (Best Practice).
+        </Label>
+        <Slider Margin="5" Name="mySlider2"/>
+        <TextBox Margin="5" 
+                 Text="{Binding ElementName=mySlider2, Path=Value, StringFormat=0.00}"  
+                 FontSize="{Binding ElementName=mySlider2, Path=Value, Converter={StaticResource MyConv}}">
+        </TextBox>
+
+        <!-- Variante 2 -->
+        <Label Margin="5 15 5 5">Lösung ohne den Converter als Ressource einzubinden (ergibt etwas viel XAML-Code).
+        </Label>
+        <Slider Margin="5" Name="mySlider"/>
+        <TextBox Margin="5">
+            <TextBox.Text>
+                <Binding ElementName="mySlider" Path="Value" StringFormat="0.00" />
+            </TextBox.Text>
+            <TextBox.FontSize>
+                <Binding ElementName="mySlider" Path="Value">
+                    <Binding.Converter>
+                        <local:SchriftgroesseConverter />
+                    </Binding.Converter>
+                </Binding>
+            </TextBox.FontSize>
+        </TextBox>
+
+    </StackPanel>
+</Window>

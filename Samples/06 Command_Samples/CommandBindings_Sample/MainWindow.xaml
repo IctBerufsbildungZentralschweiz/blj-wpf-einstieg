@@ -1,0 +1,21 @@
+﻿<Window x:Class="CommandBindings_Sample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CommandBindings_Sample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="150" Width="275" WindowStartupLocation="CenterScreen" FontSize="14">
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Help" CanExecute="Help_CanExecute" Executed="Help_Executed" />
+    </Window.CommandBindings>
+    <Window.InputBindings> 
+        <!-- Help-Befehl an die Tastenkombination {Alt}+{F10} knüpfen -->
+        <KeyBinding Key="F10" Modifiers="Alt" Command="ApplicationCommands.Help" CommandParameter="Aufruf des Commands erfolgte über Tastenkombination." />
+        <!-- Help-Befehl an eine Mausaktion knüpfen {Alt}+{rechte Maustaste}  -->
+        <MouseBinding Gesture="Alt+RightClick" Command="ApplicationCommands.Help" CommandParameter="Aufruf des Commands erfolgte über Mausaktion." />
+    </Window.InputBindings>
+    <StackPanel>
+        <Button Command="ApplicationCommands.Help" CommandParameter="Aufruf des Commands erfolgte über den Button."  Content="Hilfe" />
+    </StackPanel>
+</Window>

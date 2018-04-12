@@ -1,0 +1,24 @@
+﻿<Window x:Class="ApplicationCommands_Sample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ApplicationCommands_Sample"
+        mc:Ignorable="d"
+        Title="ApplicationCommands Demo" Height="265.241" Width="426.058" FontSize="14">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" FontSize="14">
+            <MenuItem Header="_Bearbeiten">
+                <MenuItem Command="ApplicationCommands.Cut" Header="_Ausschneiden" />
+                <MenuItem Command="ApplicationCommands.Copy" Header="_Kopieren" />
+                <MenuItem Command="ApplicationCommands.Paste" Header="_Einfügen" />
+            </MenuItem>
+        </Menu>
+        <ToolBar DockPanel.Dock="Top"  FontFamily="Wingdings" FontSize="16px">
+            <Button Command="ApplicationCommands.Cut">"</Button>
+            <Button Command="ApplicationCommands.Copy">4</Button>
+            <Button Command="ApplicationCommands.Paste">@</Button>
+        </ToolBar>
+        <TextBox TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Text="Beispiel von hier: http://www.blackwasp.co.uk/WPFCommands_2.aspx"/>
+    </DockPanel>
+</Window>

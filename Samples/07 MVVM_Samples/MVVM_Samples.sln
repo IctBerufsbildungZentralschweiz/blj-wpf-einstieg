@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNewWindow_Sample1", "OpenNewWindow_Sample1\OpenNewWindow_Sample1.csproj", "{60AB2015-C592-4116-8D68-04F783381EE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchViews_Sample1", "SwitchViews_Sample1\SwitchViews_Sample1.csproj", "{D2CF424E-D379-449B-BA1F-0EBA77591E99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVM_Sample1", "MVVM_Sample1\MVVM_Sample1.csproj", "{7EFBE948-4897-42A2-B03F-DFB3A0297901}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60AB2015-C592-4116-8D68-04F783381EE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60AB2015-C592-4116-8D68-04F783381EE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60AB2015-C592-4116-8D68-04F783381EE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60AB2015-C592-4116-8D68-04F783381EE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2CF424E-D379-449B-BA1F-0EBA77591E99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2CF424E-D379-449B-BA1F-0EBA77591E99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2CF424E-D379-449B-BA1F-0EBA77591E99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2CF424E-D379-449B-BA1F-0EBA77591E99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EFBE948-4897-42A2-B03F-DFB3A0297901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EFBE948-4897-42A2-B03F-DFB3A0297901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EFBE948-4897-42A2-B03F-DFB3A0297901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EFBE948-4897-42A2-B03F-DFB3A0297901}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

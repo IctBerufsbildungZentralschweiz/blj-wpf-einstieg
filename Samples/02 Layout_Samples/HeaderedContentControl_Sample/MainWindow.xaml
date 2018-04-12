@@ -1,0 +1,38 @@
+﻿<Window x:Class="HeaderedContentControl_Sample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HeaderedContentControl_Sample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="171.506" Width="380.172" FontSize="18">
+    <StackPanel>
+        <GroupBox Margin="10" Padding="10">
+            <GroupBox.Header>
+                <!-- Header-Bereich, vom Typ `Object` kann ein Element eines beliebigen Typs aufnehmen. 
+                -->
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="100" Height="25">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush>
+                                <GradientStop Color="Red"/>
+                                <GradientStop Color="Yellow" Offset="0.5"/>
+                                <GradientStop Color="Green" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <TextBlock Text="Deine Lieblingsfarbe?" Margin="10, 0, 10, 0"/>
+                </StackPanel>
+            </GroupBox.Header>
+            <!-- Content-Bereich, vom Typ `Object`, d.h. er kann wie der Header-Bereich 
+                 genau ein Element aufnehmen, doch kann dieses von einem beliebigen Typ sein. 
+                Wir wählen auch hier einen Layout-Container, innerhalb dessen wir mehrere RadioButtons anordnen. 
+            -->
+            <StackPanel>
+                <RadioButton Content="Rot" VerticalContentAlignment="Center"/>
+                <RadioButton Content="Gelb" VerticalContentAlignment="Center"/>
+                <RadioButton Content="Grün" VerticalContentAlignment="Center"/>
+            </StackPanel>
+        </GroupBox>
+    </StackPanel>
+</Window>

@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Resources_Sample">
+
+    <Color x:Key="Farbe1">#ff0000</Color>
+    <SolidColorBrush x:Key="Füllung1" Color="{DynamicResource Farbe1}" />
+    <Color x:Key="Farbe2">#00ff00</Color>
+    <SolidColorBrush x:Key="Füllung2" Color="{DynamicResource Farbe2}" />
+
+</ResourceDictionary>

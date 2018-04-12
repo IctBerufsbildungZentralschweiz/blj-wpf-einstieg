@@ -1,0 +1,69 @@
+﻿<Window x:Class="CheckBox_und_RadioButton_MVVM.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CheckBox_und_RadioButton_MVVM.Views"
+        xmlns:vm="clr-namespace:CheckBox_und_RadioButton_MVVM.ViewModels"
+        xmlns:converter="clr-namespace:CheckBox_und_RadioButton_MVVM.Converter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="403.333" Width="300" FontSize="14" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="DefaultGroupBoxStyle" TargetType="GroupBox">
+            <Setter Property="Margin" Value="5, 5" />
+            <Setter Property="Padding" Value="5, 10" />
+        </Style>
+        <converter:HobbyMultiValueConverter x:Key="hobbyMultiCv" />
+    </Window.Resources>
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+
+    <StackPanel>
+        <GroupBox Header="Deine Lieblingsfarbe" Style="{DynamicResource DefaultGroupBoxStyle}">
+            <StackPanel>
+                <RadioButton Content="Rot" Name="rbRot" Command="{Binding ColorRadioButtonCommand}" CommandParameter="{Binding ElementName=rbRot, Path=Content}"/>
+                <RadioButton Content="Grün" Name="rbGruen" Command="{Binding ColorRadioButtonCommand}" CommandParameter="{Binding ElementName=rbGruen, Path=Content}" />
+                <RadioButton Content="Blau" Name="rbBlau"  Command="{Binding ColorRadioButtonCommand}" CommandParameter="{Binding ElementName=rbBlau, Path=Content}" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Dein Lieblingstier" Style="{DynamicResource DefaultGroupBoxStyle}">
+            <StackPanel>
+                <RadioButton Content="Hund" Name="rbHund" Command="{Binding AnimalRadioButtonCommand}" CommandParameter="{Binding ElementName=rbHund, Path=Content}" />
+                <RadioButton Content="Katze" Name="rbKatze" Command="{Binding AnimalRadioButtonCommand}" CommandParameter="{Binding ElementName=rbKatze, Path=Content}"/>
+                <RadioButton Content="Maus" Name="rbMaus" Command="{Binding AnimalRadioButtonCommand}" CommandParameter="{Binding ElementName=rbMaus, Path=Content}"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Deine Hobbies" Style="{DynamicResource DefaultGroupBoxStyle}">
+            <StackPanel>
+                <CheckBox Content="Kino" Name="chkKino" Command="{Binding HobbyCheckBoxCommand}">
+                    <CheckBox.CommandParameter>
+                        <MultiBinding Converter="{StaticResource hobbyMultiCv}">
+                            <Binding ElementName="chkKino" Path="IsChecked" />
+                            <Binding ElementName="chkKino" Path="Content" />
+                        </MultiBinding>
+                    </CheckBox.CommandParameter>
+                </CheckBox>
+                <CheckBox Content="Lesen" Name="chkLesen" Command="{Binding HobbyCheckBoxCommand}">
+                    <CheckBox.CommandParameter>
+                        <MultiBinding Converter="{StaticResource hobbyMultiCv}">
+                            <Binding ElementName="chkLesen" Path="IsChecked" />
+                            <Binding ElementName="chkLesen" Path="Content" />
+                        </MultiBinding>
+                    </CheckBox.CommandParameter>
+                </CheckBox>
+                <CheckBox Content="Sport" Name="chkSport" Command="{Binding HobbyCheckBoxCommand}">
+                    <CheckBox.CommandParameter>
+                        <MultiBinding Converter="{StaticResource hobbyMultiCv}">
+                            <Binding ElementName="chkSport" Path="IsChecked" />
+                            <Binding ElementName="chkSport" Path="Content" />
+                        </MultiBinding>
+                    </CheckBox.CommandParameter>
+                </CheckBox>
+            </StackPanel>
+        </GroupBox>
+        <DockPanel>
+            <Button Content="Anzeigen" Width="85" Command="{Binding ShowMessageCommand}"/>
+        </DockPanel>
+    </StackPanel>
+</Window>

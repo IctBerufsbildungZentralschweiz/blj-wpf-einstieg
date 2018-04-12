@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layout-erstellen", "Layout-erstellen\Layout-erstellen.csproj", "{FE484331-55F9-4931-A437-1A45D359740B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioButtons-gestalten", "RadioButtons-gestalten\RadioButtons-gestalten.csproj", "{368041CC-EFFB-4179-A023-2F5F5AA786C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Texte-darstellen", "Texte-darstellen\Texte-darstellen.csproj", "{42E06FAA-E319-494D-BD8A-AF1E2F84B795}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layout-für-einen-Editor", "Layout-für-einen-Editor\Layout-für-einen-Editor.csproj", "{2649CD2F-5FBE-40F8-AD13-CB21FE251385}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello-World", "Hello-World\Hello-World.csproj", "{5E4C1025-328D-4ABE-9CB7-08B7448E3878}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextBox-und-ListBox", "TextBox-und-ListBox\TextBox-und-ListBox.csproj", "{FF74D04B-B315-4256-AB81-CE172DD3966A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aufgabensammlung Controls", "Aufgabensammlung Controls", "{F2C70554-9F52-42E5-B796-F846B0EAB034}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckBox-und-RadioButton", "CheckBox-und-RadioButton\CheckBox-und-RadioButton.csproj", "{880407FC-32B8-416A-9FD8-17961C6858A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextBox-und-ListBox_MVVM", "TextBox-und-ListBox_MVVM\TextBox-und-ListBox_MVVM.csproj", "{14FA5C62-0E8E-414C-AB16-3812D33406B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboBox-und-ListBox", "ComboBox-und-ListBox\ComboBox-und-ListBox.csproj", "{471BCADC-1683-4DE4-A284-E4C362B53283}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckBox-und-RadioButton_MVVM", "CheckBox-und-RadioButton_MVVM\CheckBox-und-RadioButton_MVVM.csproj", "{224E1DB7-9A9F-419A-9D35-5C84B4E7D80E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE484331-55F9-4931-A437-1A45D359740B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE484331-55F9-4931-A437-1A45D359740B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE484331-55F9-4931-A437-1A45D359740B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE484331-55F9-4931-A437-1A45D359740B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{368041CC-EFFB-4179-A023-2F5F5AA786C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{368041CC-EFFB-4179-A023-2F5F5AA786C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{368041CC-EFFB-4179-A023-2F5F5AA786C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{368041CC-EFFB-4179-A023-2F5F5AA786C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42E06FAA-E319-494D-BD8A-AF1E2F84B795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42E06FAA-E319-494D-BD8A-AF1E2F84B795}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42E06FAA-E319-494D-BD8A-AF1E2F84B795}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42E06FAA-E319-494D-BD8A-AF1E2F84B795}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2649CD2F-5FBE-40F8-AD13-CB21FE251385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2649CD2F-5FBE-40F8-AD13-CB21FE251385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2649CD2F-5FBE-40F8-AD13-CB21FE251385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2649CD2F-5FBE-40F8-AD13-CB21FE251385}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E4C1025-328D-4ABE-9CB7-08B7448E3878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E4C1025-328D-4ABE-9CB7-08B7448E3878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E4C1025-328D-4ABE-9CB7-08B7448E3878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E4C1025-328D-4ABE-9CB7-08B7448E3878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF74D04B-B315-4256-AB81-CE172DD3966A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF74D04B-B315-4256-AB81-CE172DD3966A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF74D04B-B315-4256-AB81-CE172DD3966A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF74D04B-B315-4256-AB81-CE172DD3966A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{880407FC-32B8-416A-9FD8-17961C6858A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{880407FC-32B8-416A-9FD8-17961C6858A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{880407FC-32B8-416A-9FD8-17961C6858A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{880407FC-32B8-416A-9FD8-17961C6858A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14FA5C62-0E8E-414C-AB16-3812D33406B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14FA5C62-0E8E-414C-AB16-3812D33406B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14FA5C62-0E8E-414C-AB16-3812D33406B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14FA5C62-0E8E-414C-AB16-3812D33406B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{471BCADC-1683-4DE4-A284-E4C362B53283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{471BCADC-1683-4DE4-A284-E4C362B53283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{471BCADC-1683-4DE4-A284-E4C362B53283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{471BCADC-1683-4DE4-A284-E4C362B53283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{224E1DB7-9A9F-419A-9D35-5C84B4E7D80E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{224E1DB7-9A9F-419A-9D35-5C84B4E7D80E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{224E1DB7-9A9F-419A-9D35-5C84B4E7D80E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{224E1DB7-9A9F-419A-9D35-5C84B4E7D80E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF74D04B-B315-4256-AB81-CE172DD3966A} = {F2C70554-9F52-42E5-B796-F846B0EAB034}
+		{880407FC-32B8-416A-9FD8-17961C6858A7} = {F2C70554-9F52-42E5-B796-F846B0EAB034}
+		{14FA5C62-0E8E-414C-AB16-3812D33406B3} = {F2C70554-9F52-42E5-B796-F846B0EAB034}
+		{471BCADC-1683-4DE4-A284-E4C362B53283} = {F2C70554-9F52-42E5-B796-F846B0EAB034}
+		{224E1DB7-9A9F-419A-9D35-5C84B4E7D80E} = {F2C70554-9F52-42E5-B796-F846B0EAB034}
+	EndGlobalSection
+EndGlobal

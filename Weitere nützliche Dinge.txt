@@ -1,0 +1,28 @@
+Festlegen eines Fokusbereiches
+******************************
+
+Mit FocusManager.IsFocusScope
+
+Im folgenden Beispiel gehören die beiden Buttons einem eigenen Fokusbereich an. 
+Das führt dazu, dass bei Klick auf einen Button, der Fokus auf der selektierten TextBox 
+bleibt. 
+
+<StackPanel>
+  <WrapPanel FocusManager.IsFocusScope="True">
+    <Button Width="130" Height="30" Command="ApplicationCommands.Copy">
+      Kopieren
+    </Button>
+    <Button Width="130" Height="30" Command="ApplicationCommands.Paste">
+      Einfügen
+    </Button>
+  </WrapPanel>
+  <TextBox Name="text1" Margin="5" Height="25" Background="AntiqueWhite" 
+           FontSize="14"></TextBox>
+  <TextBox Name="text2" Margin="5,0,5,5" Height="25" Background="AntiqueWhite" 
+           FontSize="14"></TextBox>
+</StackPanel>
+
+Wo wird das benötigt? Z.B. bei RoutedEvents, wo Das Festlegen des Befehlsziels 
+mit CommandTarget den Nachteil hat, dass nur ein bestimmtes Element als Ziel angegeben 
+werden kann und eine Lösung benötigt wird, bei der ein Findungsmechanismus die aktuell
+fokussierte TextBox ermittelt. 

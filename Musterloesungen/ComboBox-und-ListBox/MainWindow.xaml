@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ComboBox_und_ListBox"
         mc:Ignorable="d"
-        Title="ComboBox und ListBox" Height="244.555" Width="570.735" WindowStartupLocation="CenterScreen" FontSize="14">
+        Title="ComboBox und ListBox" Height="245" Width="575" WindowStartupLocation="CenterScreen" FontSize="14">
     <StackPanel>
         <GroupBox Header="Was ich heute frühstückte" Margin="10,10" Padding="0,10" Height="197">
             <Grid>

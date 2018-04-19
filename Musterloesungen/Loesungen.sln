@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckBox-und-RadioButton_MV
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI-Elemente-binden", "UI-Elemente-binden\UI-Elemente-binden.csproj", "{38174116-880E-4BE6-AE2D-F10A11158551}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboBox-und-ListBox_MVVM", "ComboBox-und-ListBox_MVVM\ComboBox-und-ListBox_MVVM.csproj", "{8D342189-D308-4589-B811-FBB7DCA59694}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{38174116-880E-4BE6-AE2D-F10A11158551}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38174116-880E-4BE6-AE2D-F10A11158551}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38174116-880E-4BE6-AE2D-F10A11158551}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D342189-D308-4589-B811-FBB7DCA59694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D342189-D308-4589-B811-FBB7DCA59694}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D342189-D308-4589-B811-FBB7DCA59694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D342189-D308-4589-B811-FBB7DCA59694}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,5 +93,6 @@ Global
 		{14FA5C62-0E8E-414C-AB16-3812D33406B3} = {F2C70554-9F52-42E5-B796-F846B0EAB034}
 		{471BCADC-1683-4DE4-A284-E4C362B53283} = {F2C70554-9F52-42E5-B796-F846B0EAB034}
 		{224E1DB7-9A9F-419A-9D35-5C84B4E7D80E} = {F2C70554-9F52-42E5-B796-F846B0EAB034}
+		{8D342189-D308-4589-B811-FBB7DCA59694} = {F2C70554-9F52-42E5-B796-F846B0EAB034}
 	EndGlobalSection
 EndGlobal

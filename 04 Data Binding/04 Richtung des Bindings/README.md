@@ -12,9 +12,9 @@ Mit der _Mode_-Property der `Binding`-Klasse kann die Flussrichtung eines Data B
 
     ![Bild 1](res/01.jpg)
 
-Als **Default** Mode wird _OneWay_ verwendet bei Elementen, deren _BindsTwoWayByDefault_-Eigenschaft in den Metadaten auf _true_ gesetzt ist, z.B. bei einem Slider. Andernfalls wird der Mode _TwoWay_ verwendet, z.B. bei einer TextBox. 
+Als **Default** Mode wird _OneWay_ verwendet bei Elementen, deren _BindsTwoWayByDefault_-Eigenschaft in den Metadaten auf _false_ gesetzt ist, z.B. bei einem Slider. Andernfalls wird der Mode _TwoWay_ verwendet, z.B. bei einer TextBox. 
 
-Das folgende Beispiel zeigt ein _OneWay_ Binding. Änderungen am Slider werden in von der Textbox übernommen, aber nicht umgekehrt. 
+Das folgende Beispiel zeigt ein _OneWay_ Binding. Änderungen am Slider werden von der Textbox übernommen, aber nicht umgekehrt. 
 
 ```XML
 <Slider Name="SourceSlider" Minimum="0" Maximum="100" />

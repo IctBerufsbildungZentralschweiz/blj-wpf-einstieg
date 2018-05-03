@@ -2,9 +2,13 @@
 
 ## Aufgabe 
 
-Erstelle eine Anwendung, mit der ein Kaffeetrinker die Tassengrösse für seinen Kaffee bestimmen kann. Die Anwendung soll Datenbindung beinhalten sodass sich die Grösse der Kaffeetasse entsprechend dem geswählten Slider-Wert anpasst.
+Erstelle eine Anwendung, mit der ein Kaffeetrinker die Tassengrösse für seinen Kaffee bestimmen kann. Die Anwendung soll Datenbindung beinhalten, sodass sich die Grösse der Kaffeetasse entsprechend dem gewählten Slider-Wert anpasst.
 
-### Ressourcen 
+### Schritt 1
+
+Erstelle eine Oberfläche, die wie folgt aussieht. 
+
+![Bild 1](res/01.jpg)
 
 Die Bilder, die du für die Aufgabe benötigst, findest du hier: 
 
@@ -12,11 +16,6 @@ Die Bilder, die du für die Aufgabe benötigst, findest du hier:
 * [Mittelgrosse Tasse](res/medium.jpg)
 * [Grosse Tasse](res/big.jpg)
 
-### Schritt 1
-
-Erstelle eine Oberfläche, die wie folgt aussieht. 
-
-![Bild 1](res/01.jpg)
 
 ### Schritt 2 
 
@@ -49,8 +48,8 @@ Als nächstes benötigen wir eine Klasse, die wir als _DataContext_ für das Mai
     ```CSharp
     List<ImageModel> _imageModels;
     ```
-* ...eine öffentliche Eigenschaft _SelectedValue_ vom Typ `int` bereit stellt, die an die _Value_-Eigenschaft des Sliders gebunden werden kann.
-* ...eine öffentliche Eigenschaft `SelectedModel` vom Typ `ImageModel` bereit stellt, um den _ImagePath_ und den _Typ_ des aktuell durch den Slider selektierten Models an die _Source_-Eigenschaft des Images respektive an die _Text_-Eigenschaft des Textfeldes binden zu können. 
+* ...eine öffentliche Eigenschaft _SelectedValue_ vom Typ `int` besitzt, die an die _Value_-Eigenschaft des Sliders gebunden werden kann.
+* ...eine öffentliche Eigenschaft `SelectedModel` vom Typ `ImageModel` hat, um den _ImagePath_ und den _Typ_ des aktuell durch den Slider selektierten Models an die _Source_-Eigenschaft des Images respektive an die _Text_-Eigenschaft des Textfeldes binden zu können. 
 
     ```CSharp
     public ImageModel SelectedModel
@@ -67,7 +66,7 @@ Als nächstes benötigen wir eine Klasse, die wir als _DataContext_ für das Mai
 
 Verknüpfe das ViewModel mit der View indem du zunächst den _DataContext_ deines Windows auf eine neue Instanz des ViewModels setzst und danach das DataBinding im XAML-Code einrichtest. 
 
-Binde die _Value_-Eigenschaft des Sliders an die _SelectedValue_-Eigenschaft des ViewModels, die _Source_-Eigenschaft des Images an die _ImagePath_-Eigenschaft des aktuell selektierten ImageModels und die _Text_-Eigenschaft des Textfeldes an die _Typ_-Eigenschaft des selektierten ImageModels. 
+Binde mit XAML die _Value_-Eigenschaft des Sliders an die _SelectedValue_-Eigenschaft des ViewModels, die _Source_-Eigenschaft des Images an die _ImagePath_-Eigenschaft des aktuell selektierten ImageModels und die _Text_-Eigenschaft des Textfeldes an die _Typ_-Eigenschaft des aktuell selektierten ImageModels. 
 
 ### Die fertige Anwendung  
 

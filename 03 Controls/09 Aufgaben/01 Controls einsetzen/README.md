@@ -103,6 +103,8 @@ Erstelle eine Frühstück-Anwendung _„Was ich heute frühstückte“_ mit eine
 * Nach dem Löschen eines ListBox-Eintrags soll automatisch der darunterliegende Eintrag selektiert sein (oder der darüber liegende, wenn keiner mehr darunter war).
 * Der Default-Button (Eigenschaft _IsDefault_ von `Button`) soll dynamisch je nach Veränderung der Situation gesetzt werden, d.h. wenn der Fokus links auf der ComboBox liegt, dann wird der Button >> zum Default-Button und wenn der Fokus rechts auf ListBox liegt, wird es der Button <<.
 
+#### Zusatzaufgabe
+
 ## Aufgabe 4
 
 ### Mehrfacheingaben erkennen (todo)

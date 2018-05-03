@@ -8,11 +8,13 @@ Mit der _Mode_-Property der `Binding`-Klasse kann die Flussrichtung eines Data B
 
 3. **OneWayToSource**: Die Source wird aktualisiert, wenn das Target sich ändert. 
 
-4. **TwoWay**: Das Target wird aktualisiert, wenn sich die Source ändert und umgekehrt wird die Source aktualisert, wenn sich das Target ändert. 
+4. **TwoWay**: Das Target wird aktualisiert, wenn sich die Source ändert und umgekehrt wird die Source aktualisiert, wenn sich das Target ändert. 
 
     ![Bild 1](res/01.jpg)
 
 Als **Default** Mode wird _OneWay_ verwendet bei Elementen, deren _BindsTwoWayByDefault_-Eigenschaft in den Metadaten auf _false_ gesetzt ist, z.B. bei einem Slider. Andernfalls wird der Mode _TwoWay_ verwendet, z.B. bei einer TextBox. 
+
+**Beispiel**
 
 Das folgende Beispiel zeigt ein _OneWay_ Binding. Änderungen am Slider werden von der Textbox übernommen, aber nicht umgekehrt. 
 
@@ -29,10 +31,3 @@ Mit _Mode=TwoWay_ hingegen funktioniert das Binding in beide Richtungen:
 ```
 
  ![Bild 2](res/02.jpg)
-
- ## UpdateSourceTrigger 
-
- **Work in Progress** 
-
-* Theorie Input: Huber, Seite 654 
-* Beispiel von oben (Slider) weiterführen, eignet sich hervorragend ;)

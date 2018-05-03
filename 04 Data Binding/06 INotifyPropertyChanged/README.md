@@ -1,7 +1,5 @@
 # Das Interface `INotifyPropertyChanged`
 
-## Aktualisieren gebundener Objekte
-
 In der Realität möchten Anwender Daten nicht nur angezeigt haben, sondern sie wollen die Daten auch ändern können. Mal angenommen, es sei zu diesem Zweck in XAML einen `Button` definiert: 
 
 ```XML
@@ -26,9 +24,9 @@ Um dieses Problem zu lösen, bieten sich drei Alternativen an:
 * In jeder Eigenschaft des Objekts ein separates Ereignis bereitstellen, das gefeuert wird, wenn der Eigenschaftswert ändert. In Beispiel oben würden diese drei Events z.B. _NameChanged_, _AlterChanged_ und _WohnortChanged_ lauten. Auch diese Alternative ist relativ aufwendig.
 * Die Schnittstelle `INotifyPropertyChanged` implementieren. Dies ist die bevorzugte Lösung.
 
-## Das `INotifyPropertyChanged` Interface
+## Aktualisieren gebundener Objekte
 
-Dieses Interface gehört zum Namespace _System.ComponentModel_ und schreibt das Ereignis _PropertyChanged_ vor, das nach jeder Eigenschaftsänderung ausgelöst werden muss. Über dieses Ereignis werden gebundene Elemente über die Änderung benachrichtigt. 
+Das `INotifyPropertyChanged`-Interface gehört zum Namespace _System.ComponentModel_ und schreibt das Ereignis _PropertyChanged_ vor, das nach jeder Eigenschaftsänderung ausgelöst werden muss. Über dieses Ereignis werden gebundene Elemente über die Änderung benachrichtigt. 
 
 Zum Beispiel sieht die Implementation von `INotifyPropertyChanged` in einer Klasse `Person` so aus: 
 

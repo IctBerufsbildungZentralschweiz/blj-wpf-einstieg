@@ -33,7 +33,7 @@ In der ersten Spalte soll sich das Menu befinden.
 
 Wir wollen für jedes Menu-Item einen `Button` verwenden mit passendem Text darunter. Die Buttons können mit Bilder versehen werden, damit das Menu ansprechend aussieht. Passenden Icons findest du hier:  [Icons](https://de.freepik.com/freie-ikonen/schnittstelle)
 
-**Tipp:** Verwende ein `StackPanel` um die Buttons und die Texte untereinander zu platzieren.
+**Tipp:** Verwende ein `StackPanel` um die Buttons und die Texte untereinander zu platzieren. 
 
 ```xml
 <StackPanel Grid.Row="0">

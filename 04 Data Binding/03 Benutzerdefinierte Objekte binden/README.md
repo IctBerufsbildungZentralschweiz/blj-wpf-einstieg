@@ -1,6 +1,6 @@
 # Bindung benutzerdefinierter Objekte 
 
-Es können nicht nur UI-Elemente als Datenquellen für DataBinding benutzt werden, sondern auch beliebige, selbst definierte Objekte. 
+Nicht nur UI-Elemente können als Datenquellen für DataBinding benutzt werden, sondern auch beliebige, selbst definierte Objekte. 
 
 Zum Beispiel eine Klasse `Person` mit den Eigenschaften _Name_, _Wohnort_ und _Alter_. 
 
@@ -30,12 +30,12 @@ Innerhalb des XAML-Codes wird im Resources-Abschnitt von `Window` die Klasse Per
 </Window.Resources>
 ```
 
-Den Eigenschaften des Objekts kann dabei bei Bedarf ein Anfangswert übergeben werden. Daran sind zwei Bedingungen geknüpft:
+Den Eigenschaften des Objekts kann bei Bedarf ein Anfangswert übergeben werden. Daran sind zwei Bedingungen geknüpft:
 
 1. Damit die Klasse im XAML-Code instanziiert werden kann, muss sie einen parameterlosen Konstruktor haben.
 2. Die Eigenschaften müssen als _Property_ geprägt sein, d. h. sie müssen einen _set_- und einen _get_-Accessor haben.
 
-Um die Eigenschaften _Name_, _Wohnort_ und _Alter_ des Objekts jeweils an die  _Text_-Eigenschaft einer TextBox zu binden, wird ein Binding-Objekt benötigt. Dabei beschreibt die Eigenschaft _Source_ des Binding-Objekts die Datenquelle. Mit einer verschachtelten Markup-Erweiterung unter Angabe von _StaticResource_ und dem Identifier kann die Ressource angesprochen und mit _Path_ an die gewünschte Eigenschaft des Person-Objekts gebunden werden. 
+Um nun die Eigenschaften _Name_, _Wohnort_ und _Alter_ des Objekts jeweils an die  _Text_-Eigenschaft einer TextBox zu binden, benötigen wir ein Binding-Objekt. Dabei beschreibt die Eigenschaft _Source_ des Binding-Objekts die Datenquelle. Mit einer verschachtelten Markup-Erweiterung unter Angabe von _StaticResource_ und dem Identifier kann die Ressource angesprochen und mit _Path_ an die gewünschte Eigenschaft des Person-Objekts gebunden werden. 
 
 ```XML
 <StackPanel>
@@ -62,7 +62,7 @@ public partial class MainWindow : Window
 }
 ```
 
-Wiederum soll die Eigenschaft _Firstname_ des Objekts an die Eigenschaft _Text_ einer TextBox gebunden werden. Dies erfolgt wie gehabt im XAML-Code. 
+Wiederum soll die Eigenschaft _Firstname_ des Objekts an die Eigenschaft _Text_ einer TextBox gebunden werden. Dies erfolgt wie gehabt im XAML-Code. Die Angabe der _Source_ ist dabei nicht nötig; es wird automatisch der _DataContext_ des Windows als Quelle verwendet. 
 
 ```XML
  <StackPanel>
@@ -76,7 +76,7 @@ Als Resultat werden die Werte der Eigenschaften des _Person_-Objektes in den Tex
 
 ![Bild 1](res/01.jpg)
 
-## Der DataContext
+### Der DataContext
 
 Im Beispiel oben haben wir gesehen, wie das zu im GUI bindende Objekt über die _DataContext_-Eigenschaft dem Window zugewiesen wird. 
 
@@ -84,7 +84,7 @@ Die _DataContext_-Eigenschaft ist vom Typ `Object` und in der WPF-Klassenhierarc
 
 **Hinweis:** Natürlich können auf tiefer liegenden Elementen auch bei gesetztem _DataContext_ die Properties _ElementName oder _Source_ gesetzt werden, um eine andere Binding-Source als jene des DataContexts zu forcieren. 
 
-## Die `Binding`-Klasse
+## Die Klasse `Binding`
 
 Da die `Binding`-Klasse  nebst einem parameterlosen Konstruktor einen zweiten Konstruktor besitzt, der den für die _Path_-Property verwendeten Pfad entgegennimmt, kann ein Binding-Markup in XAML auch verkürzt dargestellt werden: 
 
@@ -102,9 +102,9 @@ Statt...
 
 ### Die _Path_-Property
 
-Die _Path_-Property ist die meistgesetzte Property beim Data Binding. Sie ist vom Typ `PropertyPath` und definiert den Pfad zur Source (Quelle), an die gebuden wird.
+Die _Path_-Property ist die meistgesetzte Property beim Data Binding. Sie ist vom Typ `PropertyPath` und definiert den Pfad zur Source (Quelle), an die gebunden wird.
 
-In XAML wird zum Setzen der _Path_-Property ein einfacher String angegeben. In C# dagegen muss explizit ein `PropertyPath`-Objekt erzeugt werden, dessn _Path_-Property den String entgegennimmt. Es mag auf den ersten Blick komisch erscheinen, warum ein einfacher String-Pfad in der Klasse `PropertyPath` gekapselt wird. Die Antwort darauf ist jedoch simpel: Ein Pfad kann relativ komplex sein und benötigt zur Auflösung im Hintergrund etwas Logik und Reflektion. 
+In XAML wird zum Setzen der _Path_-Property ein einfacher String angegeben. In C# dagegen muss explizit ein `PropertyPath`-Objekt erzeugt werden, dessen _Path_-Property den String entgegennimmt. Es mag auf den ersten Blick komisch erscheinen, warum ein einfacher String-Pfad in der Klasse `PropertyPath` gekapselt wird. Die Antwort darauf ist jedoch simpel: Ein Pfad kann relativ komplex sein und benötigt zur Auflösung im Hintergrund etwas Logik und Reflektion. 
 
 Die _Path_-Property kann mit unterschiedlichen Pfaden umgehen. Folgend ein paar Beispiele: 
 
@@ -120,7 +120,7 @@ Die _Path_-Property kann mit unterschiedlichen Pfaden umgehen. Folgend ein paar 
 
 * **_Path=(OwnerType.AttachedPropertyName)_**: Es wird an eine auf dem aktuellen Source-Objekt gesetzte Attached Property gebunden. 
     
-    Ein kleines Beispiel: 
+    Ein Beispiel: 
 
     ```XML
         <Grid> 
@@ -134,7 +134,7 @@ Die _Path_-Property kann mit unterschiedlichen Pfaden umgehen. Folgend ein paar 
 
 * **_Path=Propertyname/Propertyname_**: Diese Angabe mit Schrägstrich wird für Master-Detail Szenarien verwendet, z.B. _Path=Orders/OrderDetails_.
 
-Die hier dargestellen Möglichkeiten zur Angabe des Pfades lassen sich beliebig verschachteln. D.h. es können einfach mehrere verschachtelte Eigenschaften hintereinander geschrieben werden: 
+Die hier dargestellen Möglichkeiten zur Angabe des Pfades lassen sich beliebig verschachteln. D.h. es können mehrere verschachtelte Eigenschaften hintereinander geschrieben werden: 
 
 ```XML
 <TextBox Text="{Binding ElementName=MyListBox, Path=Items[0].Content}" />

@@ -1,6 +1,6 @@
 # Eine Liste binden 
 
-Oft werden nicht einzelne Objekte gebunden, sondern Datenquellen, die mehrere Elemente enthalten wie z.B. Listen. Hier kommen die WPF-ItemsControls ins Spiel. Das sind UI-Elemente, die von der Basisklasse `ItemsControl` abgeleitet sind. Die WPF hat einige davon zu bieten: 
+Oft werden nicht einzelne Objekte gebunden, sondern Datenquellen, die mehrere Elemente enthalten wie z.B. Listen. Hier kommen die ItemsControls ins Spiel. Das sind UI-Elemente, die von der Basisklasse `ItemsControl` abgeleitet sind. Die WPF hat einige davon zu bieten: 
 
 * `ComboBox`
 * `ListBox`
@@ -11,7 +11,7 @@ Oft werden nicht einzelne Objekte gebunden, sondern Datenquellen, die mehrere El
 
 Diese Controls können mit der Eigenschaft _DataContext_ oder alternativ mit der Eigenschaft _ItemsSource_ an eine Datenquelle gebunden werden. 
 
-Wie das Binden von Listen funktioniert, wird anhand der folgenden Klasse `Firma` an, die über eine entsprechende Eigenschaft Zugriff auf eine Liste von Mitarbeitern bietet. 
+Wie das Binden von Listen funktioniert, wird anhand einer Klasse `Firma` gezeigt, die über eine entsprechende Eigenschaft Zugriff auf eine Liste von Mitarbeitern bietet. 
 
 ```CSharp 
 class Firma
@@ -54,11 +54,11 @@ Im XAML-Code wird einerseits der Name der Firma an einen TextBlock gebunden und 
 </StackPanel>
 ```
 
-Jedoch zeigt die ListBox noch nicht das an, was wir gerne möchten. Wie der folgende Screen-Print zeigt, werden nicht die Informationen zu den Mitarbeiter ausgegeben, sondern der Text, den die _ToString()_ Methode der Klasse `Person` zurückgibt. 
+Jedoch zeigt die ListBox nicht das an, was wir gerne möchten. Wie der folgende Screen-Print zeigt, werden nicht die Informationen zu den Mitarbeiter ausgegeben, sondern der Text, den die _ToString()_ Methode der Klasse `Person` zurückgibt. 
 
 ![Bild 1](res/01.jpg)
 
-Was tun? Eine naheliegende Möglichkeit wäre, die _ToString()_ Methode zu überschreiben, sodass sie den Namen des Mitarbeiters zurückgibt. Schöner wäre jedoch, wenn der ListBox mit XAML-Code klar gemacht werden könnte, welche Informationen sie anzeigen muss; denn Logik, die sich um die **Darstellung** von Daten kümmert, gehört nicht in eine Model-Klasse, sondern in die View, also in den XAML-Code. Bühne frei darum für die _DataTemplates_.
+Was tun? Eine naheliegende Möglichkeit wäre, die _ToString()_ Methode zu überschreiben, sodass sie den Namen des Mitarbeiters zurückgibt. Schöner wäre jedoch, wenn der ListBox mit XAML-Code klar gemacht werden könnte, welche Informationen sie anzeigen muss. Denn Logik, die sich um die **Darstellung** von Daten kümmert, gehört nicht in eine Model-Klasse, sondern in die View, also in den XAML-Code. Bühne frei darum für die _DataTemplates_.
 
 ## DataTemplates  
 
@@ -87,9 +87,7 @@ Die Namen der Mitarbeiter werden nun angezeigt.
 
 ![Bild 2](res/02.jpg)
 
-Weil sich das `DataTemplate` ähnlich verhält wie ein Content-Control und nur ein Kind-Element zulässt, benötigen wir einen Layout-Container, Um zusätzlich Wohnort und Alter auszugeben. 
-
-Es wird ein `Grid` verwendet, wobei die erste und zweite Spalte je 3/7 der verfügbaren Breite einnehmen sollen ( `Width="3*"` ) und die dritte Spalte 1/7.
+Weil sich das `DataTemplate` ähnlich verhält wie ein Content-Control und nur ein Kind-Element zulässt, benötigen wir einen Layout-Container, Um zusätzlich Wohnort und Alter auszugeben.  An dieser Stelle wird dazu ein `Grid` verwendet, wobei die erste und zweite Spalte je 3/7 der verfügbaren Breite einnehmen sollen ( `Width="3*"` ) und die dritte Spalte 1/7.
 
 ```XML
 <ListBox ItemsSource="{Binding Path=Mitarbeiter}" Name="myListBox">
@@ -110,11 +108,11 @@ Es wird ein `Grid` verwendet, wobei die erste und zweite Spalte je 3/7 der verf�
 </ListBox>
 ```
 
-Leider will das mit den Spaltenbreiten nicht so recht funktionieren. Wenn wir das Grid einfärben, sehen wir weshalb. 
+Leider will das mit den Spaltenbreiten nicht so recht funktionieren! Wenn wir das Grid einfärben, sehen wir weshalb. 
 
 ![Bild 3](res/03.jpg)
 
-Es gibt nicht nur ein Grid, sondern deren 5: für jedes Elemente in der Mitarbeiter-Liste eines. Und jedes Grid erstreckt sich **nicht** nun mal nicht über den ganzen verfügbaren Platz, sondern passt sich in der Breite dem Inhalt seiner drei Spalten an. 
+Es gibt nicht nur ein Grid, sondern deren fünf. Für jedes Element in der Mitarbeiter-Liste eines. Und jedes Grid erstreckt sich **nicht** über den ganzen verfügbaren Platz, sondern passt sich in der Breite dem Inhalt seiner drei Spalten an. 
 
 ## Styles
 

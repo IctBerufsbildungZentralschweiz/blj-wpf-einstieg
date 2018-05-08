@@ -1,6 +1,9 @@
 Attached Dependency Properties 
 - http://www.codemag.com/Article/1405061/XAML-Magic--Attached-Properties
 
+- Einstieg in Control Templates (einfaches, gutes Beispiel)
+http://www.blackwasp.co.uk/WPFControlTemplates.aspx
+
 DataTemplates:
 http://www.lernmoment.de/csharp-programmieren/datatemplate-stelle-mhelos-details-deiner-objekte-in-wpf-dar/
 ---> Neben der ItemTemplate Eigenschaft haben Controls für Auflistungen die Eigenschaft ItemTemplateSelector. Dieser kannst du einen eigenen DataTemplateSelector zuweisen. Nun kannst du nicht nur ein DataTemplate verwenden, sondern gleich mehrere. Dabei entscheidet der DataTemplateSelector basierend auf Werten in den anzuzeigenden Objekten, welches DataTemplate benutzt werden soll.

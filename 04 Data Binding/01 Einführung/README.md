@@ -31,4 +31,6 @@ binding.ElementName = sourceElem.Name;
 binging.Path = new PropertyPath("Value");
 targetTxtBox.SetBindings(TextBox.TextProperty, binding);
 ```
+## Mehr Informationen
 
+Mehr und detaillierte Informationen zur Datenbindung in der WPF finden in der Microsoft-Dokumentation: [Übersicht über die Datenbindung](https://docs.microsoft.com/de-de/dotnet/framework/wpf/data/data-binding-overview)

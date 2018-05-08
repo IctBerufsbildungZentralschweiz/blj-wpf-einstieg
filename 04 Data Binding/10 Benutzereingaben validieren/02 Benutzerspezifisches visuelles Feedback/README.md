@@ -53,7 +53,7 @@ Du möchtest zusätzlich zu den drei Ausrufezeichen den roten Rahmen um die Text
 
 ### ErrorTemplate in einen Style auslagern 
 
-Momentan wird das _ErrorTemplate_ "nur" auf die eine einzige, konkrete Textbox angewandt. Soll es auf alle Textboxen innerhalb eines Window angewandt werden, muss ein [Style](../../02%20XAML/05%20Styles/README.md) definiert werden. 
+Momentan wird das _ErrorTemplate_ "nur" auf die eine einzige, konkrete Textbox angewandt. Soll es auf alle Textboxen innerhalb eines Window angewandt werden, muss ein [Style](../../../02%20XAML/05%20Styles/README.md) definiert werden. 
 
 ```XML
     <Window.Resources>

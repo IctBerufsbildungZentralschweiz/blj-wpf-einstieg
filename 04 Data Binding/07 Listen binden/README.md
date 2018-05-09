@@ -138,3 +138,9 @@ Damit die relativen Angaben für die Spaltenbreiten greifen, müssten sich die G
 Da nun die Eigenschaft _HorizontalContentAlignment_ eines jeden ListBoxItems auf den Wert "Stretch" eingestellt ist,  werden die Grids auf die ganze verfügbare Breite gestreckt und die relativen Angaben für die Spaltenbreiten greifen wie gewünscht. 
 
 ![Bild 4](res/04.jpg)
+
+## Demo-Applikation 
+
+Visual Studio Solution mit einer Implementation des oben diskutierten Beispiels.
+
+* Download: [Liste-binden_Sample.zip](res/Liste-binden_Sample.zip) 

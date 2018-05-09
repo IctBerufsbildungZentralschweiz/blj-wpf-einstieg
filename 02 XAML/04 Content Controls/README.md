@@ -16,7 +16,7 @@ Ein Content Control wie z.B. `Window` kann zwar einen beliebigen Inhalt haben je
 
 ## WPF-Klassenhierarchie
 
-Die für die Darstellung wichtigen Klassen sind: `UIElement` und `FrameworkElement`. Davon sind u.a. auch die Content Controls abgeleitet.
+Die für die Darstellung wichtigen Klassen sind `UIElement` und `FrameworkElement`. Davon sind u.a. auch die Content Controls abgeleitet.
 
 ![Bild 1](res/01.jpg)
 
@@ -32,8 +32,6 @@ Jedes Content Control hat eine Eigenschaft _Content_, die vom Typ `Object` ist u
 ## HeaderedContentControl
 
 Ein `HeaderedContentControl` ist ein Content Control, dass einen Content-Bereich hat und zusätzlich noch einen Titel-Bereich. Ein solches ist zum Beispiel die `GroupBox`. 
-
-### Beispiel
 
 ![Bild 2](res/02.jpg)
 
@@ -78,8 +76,6 @@ WPF bringt für jedes Control ein Standardtemplate mit. Diese Standardtemplates 
 ### Austauschbarkeit
 
 Die Idee hinter den Templates ist, dass diese jederzeit ausgetauscht werden können, damit Design und Layout der Anwendung einfach angepasst werden können, ohne die Funktionalität zu beeinflussen. Deshalb haben bspw. mit WPF die UserControls an Bedeutung verloren, weil bei einem UserControl die Darstellung fest mit dem Control verdrahtet ist und sich damit nicht einfach verändern lässt. 
-
-Dazu später mehr.
 
 <!-- Todo: ControlTemplates genauer erklären und Beispiel machen.  Oder verlinken auf Dokument wo ControlTemplates erklärt werden (dieses Dok müsste allerdings auch noch erstellt werden.) -->
 

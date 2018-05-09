@@ -4,6 +4,8 @@
 
 [Wikipedia](https://de.wikipedia.org/wiki/Model_View_ViewModel)
 
+## Datenbindung 
+
 Das MVVM-Muster kann als technologie-spezifisch bezeichnet werden, da für die lose Kopplung von View und ViewModel ein Datenbindungsmechanismus benötigt wird. Diese Infrastruktur wird häufig als _Binding_ oder _Binder_ bezeichnet. Im Detail handelt es sich hierbei um einen bidirektionalen Einsatz des Beobachter-Musters.
 
 ## Komponenten 
@@ -26,7 +28,7 @@ ViewModel-Klassen sollten so implementiert werden, dass sie sich auch ohne die V
 
 ### Model 
 
-Das Datenmodell respektive die Datenzugrifsschicht, welche die Daten kapselt. Üblicherweise sind das Klassen, die lediglich Daten enthalten. 
+Das Datenmodell respektive die Datenzugriffsschicht, welche die Daten kapselt. Üblicherweise sind das Klassen, die lediglich Daten enthalten. 
 
 
 <!-- 

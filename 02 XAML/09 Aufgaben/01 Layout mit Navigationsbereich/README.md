@@ -31,7 +31,7 @@ In der ersten Spalte soll sich das Menu befinden.
 * Search
 * Settings 
 
-Wir wollen für jedes Menu-Item einen `Button` verwenden mit passendem Text darunter. Die Buttons können mit Bilder versehen werden, damit das Menu ansprechend aussieht. Passenden Icons findest du hier:  [Icons](https://de.freepik.com/freie-ikonen/schnittstelle)
+Wir wollen für jedes Menu-Item einen `Button` verwenden mit passendem Text darunter. Die Buttons können mit Bilder versehen werden, damit das Menu ansprechend aussieht. Passende Icons findest du hier:  [Icons](https://de.freepik.com/freie-ikonen/schnittstelle)
 
 **Tipp:** Verwende ein `StackPanel` um die Buttons und die Texte untereinander zu platzieren. 
 
@@ -46,7 +46,7 @@ Wir wollen für jedes Menu-Item einen `Button` verwenden mit passendem Text daru
 
 ### Schritt 3 
 
-In der mittleren Spalte soll ein `GridSplitter` dafür sorgen, dass der Benutzer mit der Maus die Spaltenbreiten der ersten und der dritten Spalte verändern kann, ohne die Dimensionen des Fensters verändern zu müssen.
+In der mittleren Spalte soll ein `GridSplitter` dafür sorgen, dass der Benutzer mit der Maus die Spaltenbreiten der ersten und dritten Spalte verändern kann, ohne die Dimensionen des Fensters verändern zu müssen.
 
 ```xml
 <GridSplitter Grid.Column="1" Grid.RowSpan="3" Width="5" 
@@ -71,7 +71,7 @@ Als letztes wollen wir auf die Klicks des Benutzers reagieren und im Content-Ber
 * 'Search' wurde angeklickt.
 * 'Settings' wurde angeklickt. 
 
-Erstelle dazu im XAML-Code für jeden Button das _Click_-Attribut und programmiere dann im Code-Fenster mit C# die Event-Handler. 
+Erstelle dazu im XAML-Code für jeden Button das _Click_-Attribut und programmiere dann im Code-Behind mit C# die Event-Handler. 
 
 
 

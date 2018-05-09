@@ -1,8 +1,8 @@
 # Eine Frage des Stils
 
-Layout und Aussehen einer WPF-Benutzeroberfläche lassen sich im XAML-Code nahezu beliebig konfigurieren. Das Einstellen der Eigenschaften für Font, Farbe, Grösse usw. kann allerdings mit beträchtlichem Aufwand verbunden sein und spätestens dann, wenn mehrere Steuerelemente einheitlich gestaltet werden sollen, entsteht schnell sehr viel redundanter XAML-Code.
+Layout und Aussehen einer WPF-Benutzeroberfläche lassen sich im XAML-Code nahezu beliebig konfigurieren. Das Einstellen der Eigenschaften für Font, Farbe, Grösse usw. kann allerdings mit beträchtlichem Aufwand verbunden sein und spätestens wenn mehrere Steuerelemente einheitlich gestaltet werden sollen, entsteht schnell sehr viel redundanter XAML-Code.
 
-Es empfiehlt sich darum mit Styles zu arbeiten. Styles werden einmal erstellt und dann  zentral zur Verfügung gestellt, um dann auf XAML-Elemente angewendet zu werden. Das Prinzip ist ähnlich wie jenes von CSS (Cascading Style Sheets) und HTML. 
+Es empfiehlt sich darum mit Styles zu arbeiten. Styles werden einmal erstellt und zentral zur Verfügung gestellt, um dann auf XAML-Elemente angewendet zu werden. Das Prinzip ist ähnlich wie jenes von CSS (Cascading Style Sheets) und HTML. 
 
 ## Style-Angaben in XAML 
 
@@ -13,7 +13,7 @@ Jeder Style benötigt ein _Key_- sowie ein _TargetType_-Attribut.
 * Der _Key_ wird benötigt, damit der Stil verwendet werden kann. 
 * Der _TargetType_ definiert, auf welche Art von Steuerelement der Stil anwendbar ist.
 
-Über die _&lt;Setter&gt;_ Elemente werden die Eigenschaften (_Property_) des Steuerelements gesetzt, die gestylt werden sollen, zusammen mit dem entsprechenden Wert (_Value_). Ist ein zu setzender Wert komplexer, so wird dieser, wie es für XAML typisch ist, als eigenes Tag angegeben. Das komplexe Objekt befindet sich also innterhalb von _&lt;Setter.Value&gt;_ (im unstenstehenden Beispiel handelt es sich um einen Farbverlauf).
+Über die _&lt;Setter&gt;_ Elemente werden die Eigenschaften (_Property_) des Steuerelements gesetzt, die gestylt werden sollen, zusammen mit dem entsprechenden Wert (_Value_). Ist ein zu setzender Wert komplexer, so wird dieser, wie es für XAML typisch ist, als eigenes Tag angegeben. Das komplexe Objekt befindet sich also innterhalb von _&lt;Setter.Value&gt;_ (im untenstehenden Beispiel handelt es sich um einen Farbverlauf).
 
 
 ```xml
@@ -33,7 +33,7 @@ Jeder Style benötigt ein _Key_- sowie ein _TargetType_-Attribut.
     </Window.Resources>
 ```
 
-Ist ein Stil einmal definiert, kann er einfach auf das/die entsprechende/n Element/e angewendet werden, indem er mit der speziellen Datenbindungssyntax als Wert dem _Style_-Attribut zugewiesen wird (da der Stil eine statische Ressource ist, muss die Angabe _StaticResource_  gemacht werden). 
+Ist ein Stil einmal definiert, kann er einfach auf ie entsprechenden Elemente angewendet werden, indem er mit der speziellen Datenbindungssyntax als Wert dem _Style_-Attribut zugewiesen wird. Da der Stil eine statische Ressource ist, muss die Angabe _StaticResource_  gemacht werden. 
 
 ```xml
 <TextBlock Text="Mach mich schön!" Style="{StaticResource MyTextStyle}"/>
@@ -55,11 +55,11 @@ Wem die spezielle Datenbindungssyntax mit den geschwungenen Klammern zu komplizi
 
 ## Auslagern von Styles in ein Ressourcenwörterbuch
 
-Im Beispiel oben kann der definierte Style "nur" auf `TextBlock`-Elemente innerhalb des `Window` angewendet werden. Styles werden in der Regel aber dazu genutzt, um der ganzen  Anwendung ein einheitliches, leicht und zentral änderbares Layout zu geben. Deshalb scheidet in vielen Fällen die lokale Definition von Styles aus. Stattdessen werden Styles in der App.xaml-Datei oder in einem externen Ressourcenwörterbuch bereitgestellt. 
+Im Beispiel oben kann der definierte Style "nur" auf `TextBlock`-Elemente innerhalb des `Window` angewendet werden. Styles werden in der Regel aber dazu genutzt, um der ganzen  Anwendung ein einheitliches, leicht und zentral änderbares Aussehen zu geben. Deshalb scheidet in vielen Fällen die lokale Definition von Styles aus. Stattdessen werden Styles in die App.xaml-Datei oder in ein externes Ressourcenwörterbuch ausgelagert. 
 
 ### Ressourcenwörterbuch anlegen
 
-Styles, die in ein Ressourcenwörterbuch ausgelagert werden, können von Elementen in allen Fenstern einer Anwendung  verwendet werden. Überdies kann das Ressourcenwörterbuch auch von weiteren Anwendungen wiederverwendet werden. 
+Styles in einem Ressourcenwörterbuch können von Elementen in allen Fenstern einer Anwendung  verwendet werden. Überdies kann das Ressourcenwörterbuch auch von weiteren Anwendungen wiederverwendet werden. 
 
 Ein Ressourcenwörterbuch kann mit der rechten Maustaste zum Projekt hinzugefügt werden: _Add_ > _New Item..._ > _Ressource Dictionary_.
 

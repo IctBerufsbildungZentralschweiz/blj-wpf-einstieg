@@ -19,7 +19,7 @@ Platziere in der oberen Menuleiste die Buttons _Öffnen_ und _Speichern_, richte
 
 ### Schritt 3 
 
-Im Hauptbereich des Editors soll der Anwender Texte schreiben können. Verwende hierfür ein `TextBox`-Control und hebe den Hintergrund dieses Bereiches farblich vom Rest der Oberfläche ab, damit den Anwender sieht, wo er den Cursor platzieren muss, um seinen Text zu tippen. 
+Im Hauptbereich des Editors soll der Anwender Texte schreiben können. Verwende hierfür ein `TextBox`-Control und hebe den Hintergrund dieses Bereiches farblich vom Rest der Oberfläche ab, damit der Anwender sieht, wo er den Cursor platzieren muss, um seinen Text zu tippen. 
 
 ### Schritt 4
 
@@ -27,7 +27,7 @@ In der unteren Menuleiste soll ein `Slider` dem Anwender die Möglichkeit geben,
 
 ### Schritt 5
 
-Unser Editor soll dem Benutzer eine Liste mit den zuletzt verwendeten Dateien angezeigt werden. Diese Liste soll links vom Hauptbereich platziert werden. Erstelle drei bis vier Dummy-Einträge und verwende dazu das `ItemsControl`, ein von WPF zur Verfügung gestelltes Control zur Anzeige einer Auflistung von Elementen. 
+Der Editor soll dem Benutzer eine Liste mit den zuletzt verwendeten Dateien angezeigen. Diese Liste soll links vom Hauptbereich platziert werden. Erstelle drei bis vier Dummy-Einträge und verwende dazu das `ItemsControl`, ein von WPF zur Verfügung gestelltes Control zur Anzeige einer Auflistung von Elementen. 
 
 ```xml 
 <ItemsControl Foreground="Green" Margin="5,0">

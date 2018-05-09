@@ -33,7 +33,7 @@ WPF bietet eine Anzahl vordefinierter Panel-Elemente.
 
 Nachfolgend werden die Panel-Elemente StackPanel, WrapPanel, DockPanel und Grid vorgestellt. 
 
-### `StackPanel` 
+### StackPanel
 
 Das `StackPanel` ordnet die einzelnen Elemente, die es umfasst, der Reihe nach an, ohne dass wir uns selbst um die Positionierung kümmern müssen. Als Eigenschaft kann beim StackPanel die Eigenschaft _Orientation_ gesetzt werden, die bestimmt, ob die Elemente horizontal oder vertikal angeordnet werden. 
 
@@ -48,7 +48,7 @@ Das `StackPanel` ordnet die einzelnen Elemente, die es umfasst, der Reihe nach a
     </StackPanel>
 ```
 
-### `WrapPanel` 
+### WrapPanel 
 
 Das `WrapPanel` verhält sich ähnlich wie Word oder ein Browser mit HTML. Solange horizontal genügend Platz ist, werden die Elemente nebeneinander angeordnet. Reicht der Platz nicht aus, erfolgt ein Umbruch.  
 
@@ -67,9 +67,9 @@ Das `WrapPanel` verhält sich ähnlich wie Word oder ein Browser mit HTML. Solan
     </WrapPanel>
 </Window>
 ```
-**Tipp:** Falls du das WrapPanel verwendest, solltest du darauf achten, das die Elemente alle gleich gross sind; ansonsten wird das Layout bei Umbrüchen sehr schnell sehr merkwürdig aussehen.
+**Tipp:** Falls du das WrapPanel verwendest, solltest du darauf achten, das alle Elemente gleich gross sind; ansonsten wird das Layout bei Umbrüchen sehr schnell sehr merkwürdig aussehen.
 
-### `DockPanel` 
+### DockPanel
 
 Das `DockPanel` dockt alle Elemente an einer Seite an. Die Standardseite ist links. Über die Attached Dependecy Property _DockPanel.Dock_ kann jedoch definiert werden, wo das Element sich andockt. 
 
@@ -89,7 +89,7 @@ Mit der Eigenschaft _LastChildFill_ kann das Verhalten des letzten Elementes ein
 </Window>
 ``` 
 
-### `Grid`
+### Grid
 
 Das `Grid` ist eine Art Tabelle. Es ist das beliebteste Layout Panel, weil damit komplexe Layouts umgesetzt werden können. 
 
@@ -126,9 +126,9 @@ Im folgenden Beispiel kannst du ausserdem sehen, wie sich ein Element mittels _G
 
 #### Spaltenbreite und Zeilenhöhe festlegen
 
-Die Breite der Spalten kann mit der Eigenschaft _Width_ der Klasse `ColumnDefinition` definiert werden. Dabei sind für _Width_ sowohl absolute als auch relative Werte möglich. Relative Werte können wir mit dem  `*` definieren. 
+Die Breite der Spalten kann mit der Eigenschaft _Width_ der Klasse `ColumnDefinition` definiert werden. Dabei sind für _Width_ sowohl absolute als auch relative Werte möglich. Relative Werte können mit dem  `*` definiert werden. 
 
-Im Beispiel nimmt die 1. Spalte 4/7 der Gesamtbreite ein, die 2. Spalte 1/7 und die 3. Spalte nimmt 2/7 der Gesamtbreite ein. 
+Im folgenden Beispiel nimmt die 1. Spalte 4/7 der Gesamtbreite ein, die 2. Spalte 1/7 und die 3. Spalte nimmt 2/7 der Gesamtbreite ein. 
 
 ![Bild 6](res/06.jpg)
 
@@ -140,7 +140,7 @@ Im Beispiel nimmt die 1. Spalte 4/7 der Gesamtbreite ein, die 2. Spalte 1/7 und 
 </Grid.ColumnDefinitions>
 ```
 
-Die Höhe der Zeilen wird analog der Spaltenbreite über die Eigenschaft _Width_ der Klasse `RowDefinition` festgelegt. Der Standardwert ist `1*`.
+Die Höhe der Zeilen wird analog der Spaltenbreite über die Eigenschaft _Height_ der Klasse `RowDefinition` festgelegt. Der Standardwert ist `1*`.
 
 ```xml
 <Grid.RowDefinitions>

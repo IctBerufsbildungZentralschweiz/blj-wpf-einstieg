@@ -55,7 +55,7 @@ Die Standard-Eigenschaft von Content-Controls ist _Content_.  Diese Eigenschaft 
 
 ### Standard-Eigenschaft _Children_ von Layout Containern
 
-Die Standard-Eigenschaft von Layout-Containern ist _Children_. Bei dieser handelt es sich um eine `UIElementCollection` von den Komponenten, die sich im Container befinden. Das heisst dieser Eigenschaft können mehrere Elemente zugewiesen werden. Beim `Canvas`-Element im untenstehenden Beispiel  wurden als inneres Element zwei Elemente definiert, nämlich ein `Button` und ein `Label`. Diese beiden Elemente werden automatisch zur Laufzeit der Standard-Eigenschaft _Children_ des Canvas-Elementes zugeordnet. 
+Die Standard-Eigenschaft von Layout-Containern ist _Children_. Bei dieser handelt es sich um eine `UIElementCollection` von den Komponenten, die sich im Container befinden. Das heisst dieser Eigenschaft können mehrere Elemente zugewiesen werden. Beim `Canvas`-Element im untenstehenden Beispiel  wurden als inneres Element zwei Elemente definiert, nämlich ein `Button` und ein `Label`. Diese beiden Elemente werden automatisch zur Laufzeit der Standard-Eigenschaft _Children_ des Canvas-Elementes zugewiesen. 
 
 ```xml
 <Canvas> 

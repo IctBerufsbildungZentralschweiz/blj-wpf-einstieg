@@ -24,3 +24,11 @@ public ObservableCollection<Person> Mitarbeiter { get; set; }
 
 Sobald Elemente hinzugefügt oder entfernt werden, feuert die ObservableCollection das _CollectionChanged_-Event und benachrichtigt so die gebundenen GUI-Elemente. So kann z.B. ein Delete-Button direkt und einfach auf die Collection zugreifen und das Element entfernen. Das Benachrichtigen und Aktualisieren der View erledigt die Collection respektive das Binding dann automatisch. 
 
+## Demo-Applikation 
+
+Die Demo-Applikation bindet eine ObservableCollection an eine ListBox. Wird ein neuer Mitarbeiter zur Collection hinzugefügt, aktualisiert das Data Binding die ListBox automatisch.
+
+![Bild 1](res/01.jpg)
+
+
+* Download: [ObservableCollection_Sample.zip](res/ObservableCollection_Sample.zip) 

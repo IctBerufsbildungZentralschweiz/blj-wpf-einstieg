@@ -2,16 +2,27 @@
 
 ## Aufgabe 
 
-Erstelle eine WPF-Anwendung mit zwei Eingabefeldern, in die der Vorname respektive der Nachname einer Person eingegeben werden können. Platziere unterhalb der beiden  Eingabefelder ein _TextBlock_- oder ein _Label_-Element und sorge dafür, dass dort der volle Name der Person in GROSSSCHRIFT ausgegeben wird und zwar "live" während der Benutzer tippt.   
+Erstelle eine WPF-Anwendung mit zwei Eingabefeldern, in die der Vorname respektive der Nachname einer Person eingegeben werden können. 
+
+Platziere unterhalb der beiden  Eingabefelder ein _TextBlock_- oder ein _Label_-Element und sorge dafür, dass dort der volle Name der Person in GROSSSCHRIFT ausgegeben wird und zwar "live", d.h.  schon während der Benutzer die Namen eintippt.   
 
 ![Bild 1](res/01.jpg)
 
-### Todo-Liste
+### Todo 
+
+Orientiere dich bei der Umsetzung der Aufgabe an der folgenden Todo-Liste. 
 
 - [ ] Das GUI (MainWindow) mit XAML erstellen/designen.
-- [ ] Eine Klasse `Person` erstellen mit den Eigenschaften _FirstName_, _LastName_, _FullName_ und die `INotifyPropertyChanged` implementiert.
-- [ ] `Person` als _DataContext_ des MainWindow setzen.
-- [ ] Das Data Binding für die Eingabefelder einrichten: Vorname bindet auf die Property _FirstName_ der Klasse Person, Nachname auf die Property _LastName_ und das UI-Element, welches den vollen Namen anzeigt, bindet auf die Property _FullName_.
-- [ ] Eine Klasse `UpperCaseConverter` programmieren, welche das Interface `IValueConverter` implementiert und die dazu  verwendet werden kann, einen Text in Grossbuchstaben umzuwandeln.
-- [ ] Die Konverter-Klasse `UpperCaseConverter` im MainWindow als Ressource einbinden.
-- [ ] Die Konverter-Klasse `UpperCaseConverter` gemäss Anfoderung verwenden.
+- [ ] Eine Klasse `Person` erstellen, die als Eigenschaften _FirstName_, _LastName_, _FullName_ besitzt und die `INotifyPropertyChanged` implementiert.
+- [ ] Den _DataContext_ des MainWindow setzen.
+- [ ] Das Data Binding für die Eingabefelder einrichten. 
+- [ ] Über die _UpdateSourceTrigger_-Eigenschaft steuern, dass der volle Name der Person "live", d.h. während der Benutzer Vor- und Nachname eintippt, aktualisiert wird. 
+- [ ] Die `UpperCaseConverter`-Klasse programmieren, die das Interface `IValueConverter` implementiert und die dazu  verwendet werden kann, einen Text in Grossbuchstaben umzuwandeln.
+- [ ] Die Konverter-Klasse im MainWindow als Ressource einbinden.
+- [ ] Die Konverter-Klasse gemäss Aufgabenstelltung verwenden.
+
+## Zusatzaufgabe
+
+Erweitere die Anwendung einer CheckBox, die du mit "gross" beschriftest. Der volle Name soll neu nur dann mit GROSSBUCHSTABEN ausgegeben werden, wenn die CheckBox aktiviert ist. Ist die CheckBox hingegen nicht aktiviert, soll der Name in kleinbuchstaben ausgegeben werden. 
+
+![Bild 2](res/02.jpg)

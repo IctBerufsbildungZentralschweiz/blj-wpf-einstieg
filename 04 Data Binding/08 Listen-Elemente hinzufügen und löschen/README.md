@@ -1,10 +1,4 @@
-# ObservableCollection
-
-Datenbindung ist ein sehr wichtiges Konzept der WPF und kann perfekt durch das einfache Interface `INotifyPropertyChanged` erreicht werden. Bei Klassen, die dieses Interface implementieren, aktualisieren sich Oberflächenelemente automatisch, sobald sich Werte in den gebundenen Objekten ändern. 
-
-Um diese Technik auch für Listen zu nutzen, wird eine spezielle Collection benötigt: die `ObservableCollection<T>`.
-
-## Hinzufügen und Löschen von Listen-Elementen 
+# Hinzufügen und Löschen von Listen-Elementen 
 
 Im vorherigen Kapitel ([Listen binden](../07%20Listen%20binden)) wurden die  Mitarbeiter einer Firma an eine ListBox gebunden. Die Mitarbeiter vom Typ `Person` wurden dabei in einer Liste gespeichert. 
 
@@ -14,8 +8,10 @@ public List<Person> Mitarbeiter { get; set; }
 
  Dies hat soweit gut funktioniert: die Mitarbeiter wurden in der ListBox angezeigt. 
  
- Üblicherweise werden in einer Anwendung die Daten jedoch nicht nur angezeigt, sondern der Benutzer will z.B. Mitarbeiter hinzufügen oder löschen. Damit das Data Binding  solche Änderungen am Listen-Inhalt mitbekommt, muss die Liste das Interface `INotifyCollectionChanged` implementieren. Mit der generischen Collection-Klasse `ObservableCollection<T>` im Namespace _System.Collections.ObjectModel_ enthält die WPF eine Klasse, welche dieses Interface implementiert. 
+ Üblicherweise werden in einer Anwendung die Daten jedoch nicht nur angezeigt, sondern der Benutzer will z.B. Mitarbeiter hinzufügen oder löschen. Damit das Data Binding  solche Änderungen an der Liste mitbekommt, muss die Liste das Interface `INotifyCollectionChanged` implementieren. Mit der generischen Collection-Klasse `ObservableCollection<T>` im Namespace _System.Collections.ObjectModel_ enthält die WPF eine Klasse, welche dieses Interface implementiert. 
  
+## ObservableCollection
+
  Damit GUI-Elemente, die an eine Liste gebunden sind, das Hinzufügen und das Löschen von Elementen mitkriegen, muss anstelle einer `List<T>` die `ObservableCollection<T>` (oder eine Ableitung davon) verwendet werden. 
 
 ```CSharp 

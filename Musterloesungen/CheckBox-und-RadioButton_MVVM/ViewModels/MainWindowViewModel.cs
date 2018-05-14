@@ -11,10 +11,11 @@ namespace CheckBox_und_RadioButton_MVVM.ViewModels
 {
     class MainWindowViewModel : INotifyPropertyChanged
     {
+        #region properties 
+
         public DelegateCommand<string> ColorRadioButtonCommand { get; set; }
         public DelegateCommand<string> AnimalRadioButtonCommand { get; set; }
         public DelegateCommand<object[]> HobbyCheckBoxCommand { get; set; }
-        public DelegateCommand<object> ShowMessageCommand { get; set; }
 
         string _favColor = string.Empty;
         public string FavColor
@@ -36,13 +37,18 @@ namespace CheckBox_und_RadioButton_MVVM.ViewModels
             get { return _hobbies; }
         }
 
+        #endregion
+
+        #region constructor 
+
         public MainWindowViewModel()
         {
             ColorRadioButtonCommand = new DelegateCommand<string>(ColorRadioButtonCommand_Execute, ColorRadioButtonCommand_CanExecute);
             AnimalRadioButtonCommand = new DelegateCommand<string>(AnimalRadioButtonCommand_Execute, AnimalRadioButtonCommand_CanExecute);
             HobbyCheckBoxCommand = new DelegateCommand<object[]>(HobbyCheckBoxCommand_Execute, HobbyCheckBoxCommand_CanExecute);
-            ShowMessageCommand = new DelegateCommand<object>(ShowMessageCommand_Execute, ShowMessageCommand_CanExecute);
         }
+        
+        #endregion 
 
         #region command handler
 
@@ -79,23 +85,6 @@ namespace CheckBox_und_RadioButton_MVVM.ViewModels
                 Hobbies.Remove(parameter[1].ToString());
         }
 
-        private bool ShowMessageCommand_CanExecute(object parameter)
-        {
-            return true;
-        }
-
-        private void ShowMessageCommand_Execute(object parameter)
-        {
-            string message = "Ausgewählt wurde: " + Environment.NewLine;
-
-            message += FavColor + Environment.NewLine;
-            message += FavAnimal + Environment.NewLine;
-            foreach (string s in Hobbies)
-                message += s + Environment.NewLine;
-
-            MessageBox.Show(message);
-        }
-
         #endregion 
 
         #region INotifyPropertyChanged
@@ -111,10 +100,5 @@ namespace CheckBox_und_RadioButton_MVVM.ViewModels
         }
 
         #endregion
-
-
     }
-
-
-
 }

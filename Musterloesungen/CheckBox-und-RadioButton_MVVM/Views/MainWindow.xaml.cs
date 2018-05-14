@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using CheckBox_und_RadioButton_MVVM.ViewModels;
 
 namespace CheckBox_und_RadioButton_MVVM.Views
 {
@@ -22,6 +23,20 @@ namespace CheckBox_und_RadioButton_MVVM.Views
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindowViewModel viewModel = this.DataContext as MainWindowViewModel;
+
+            string message = "Ausgewählt wurde: " + Environment.NewLine;
+
+            message += viewModel.FavColor + Environment.NewLine;
+            message += viewModel.FavAnimal + Environment.NewLine;
+            foreach (string s in viewModel.Hobbies)
+                message += s + Environment.NewLine;
+
+            MessageBox.Show(message);
         }
     }
 }

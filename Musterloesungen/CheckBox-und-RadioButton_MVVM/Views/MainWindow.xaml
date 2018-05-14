@@ -63,7 +63,7 @@
             </StackPanel>
         </GroupBox>
         <DockPanel>
-            <Button Content="Anzeigen" Width="85" Command="{Binding ShowMessageCommand}"/>
+            <Button Content="Anzeigen" Width="85" Click="Button_Click"/>
         </DockPanel>
     </StackPanel>
 </Window>

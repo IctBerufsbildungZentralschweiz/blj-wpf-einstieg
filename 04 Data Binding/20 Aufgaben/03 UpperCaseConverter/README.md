@@ -23,6 +23,6 @@ Orientiere dich bei der Umsetzung der Aufgabe an der folgenden Todo-Liste.
 
 ## Zusatzaufgabe
 
-Erweitere die Anwendung einer CheckBox, die du mit "gross" beschriftest. Der volle Name soll neu nur dann mit GROSSBUCHSTABEN ausgegeben werden, wenn die CheckBox aktiviert ist. Ist die CheckBox hingegen nicht aktiviert, soll der Name in kleinbuchstaben ausgegeben werden. 
+Erweitere die Anwendung mit einer `CheckBox`, die du mit "gross" beschriftest. Der volle Name soll neu nur dann mit GROSSBUCHSTABEN ausgegeben werden, wenn die CheckBox aktiviert ist. Ist die CheckBox hingegen nicht aktiviert, soll der Name in kleinbuchstaben ausgegeben werden. 
 
 ![Bild 2](res/02.jpg)

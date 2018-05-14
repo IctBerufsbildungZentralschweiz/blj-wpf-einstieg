@@ -31,7 +31,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboBox-und-ListBox_MVVM",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 Kaffeetasse", "Kaffeetasse\04 Kaffeetasse.csproj", "{42B97AF2-85A7-4E4A-8F1E-0FFC403E154E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 UpperCaseConverter", "04 UpperCaseConverter\04 UpperCaseConverter.csproj", "{9CB6F76D-E3D4-412C-BC8B-79581811D406}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 UpperCaseConverter", "UpperCaseConverter\04 UpperCaseConverter.csproj", "{9CB6F76D-E3D4-412C-BC8B-79581811D406}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

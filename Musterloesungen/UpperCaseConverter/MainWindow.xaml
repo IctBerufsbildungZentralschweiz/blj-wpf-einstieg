@@ -11,6 +11,7 @@
     </Window.DataContext>
     <Window.Resources>
         <local:UpperCaseConverter x:Key="upperCaseConverter" />
+        <local:VisibilityConverter x:Key="visibilityConverter" />
     </Window.Resources>
         
     <Grid>
@@ -32,7 +33,13 @@
         <Label Content="Nachname: " Grid.Row="2" />
         <TextBox Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="1" />
 
-        <TextBlock Text="{Binding FullName, Converter={StaticResource ResourceKey=upperCaseConverter}}" Grid.Row="4" Grid.Column="1" Foreground="Blue" />
+        <CheckBox Margin="10, 3" VerticalAlignment="Stretch" Content="gross" Name="chkUpper" Grid.Row="4" />
 
+        <TextBlock Text="{Binding FullName, Converter={StaticResource ResourceKey=upperCaseConverter}, ConverterParameter=toupper}" 
+                   Visibility="{Binding ElementName=chkUpper, Path=IsChecked, Converter={StaticResource ResourceKey=visibilityConverter}}"                   
+                   Grid.Row="4" Grid.Column="1" Foreground="Blue" />
+        <TextBlock Text="{Binding FullName, Converter={StaticResource ResourceKey=upperCaseConverter}}" 
+                   Visibility="{Binding ElementName=chkUpper, Path=IsChecked, Converter={StaticResource ResourceKey=visibilityConverter}, ConverterParameter=invisible}"                   
+                   Grid.Row="4" Grid.Column="1" Foreground="Blue" />
     </Grid>
 </Window>

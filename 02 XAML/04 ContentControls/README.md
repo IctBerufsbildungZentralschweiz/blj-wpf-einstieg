@@ -1,6 +1,6 @@
-# Content Controls
+# ContentControls
 
-Einige Content Controls hast du bereits kennen gelernt, z.B.
+Einige ContentControls hast du bereits kennen gelernt, z.B.
 
 * `Window` 
 * `Label`
@@ -8,15 +8,15 @@ Einige Content Controls hast du bereits kennen gelernt, z.B.
 * `UserControl`
 * `HeaderedContentControl` (z.B. `GroupBox`)
 
-Auch ein `Label` ist bei WPF ein Content Control. Du kannst einem Label also nicht nur Text, sondern beliebige Inhalte zuordnen. 
+Auch ein `Label` ist bei WPF ein ContentControl. Du kannst einem Label also nicht nur Text, sondern beliebige Inhalte zuordnen. 
 
 ## Verschachtelung von Controls
 
-Ein Content Control wie z.B. `Window` kann zwar einen beliebigen Inhalt haben jedoch nur genau ein Unterelement. Werden für ein Layout mehrere Unterelemente benötigt, muss dem Content Control ein [Layout Container](../03%20Layout%20Container/README.md) zugewiesen werden, der wiederum Content Controls und auch weitere Layout Container beinhalten kann. 
+Ein ContentControl wie z.B. `Window` kann zwar einen beliebigen Inhalt haben jedoch nur genau ein Unterelement. Werden für ein Layout mehrere Unterelemente benötigt, muss dem ContentControl ein [Layout Container](../03%20Layout%20Container/README.md) zugewiesen werden, der wiederum ContentControls und auch weitere Layout Container beinhalten kann. 
 
 ## WPF-Klassenhierarchie
 
-Die für die Darstellung wichtigen Klassen sind `UIElement` und `FrameworkElement`. Davon sind u.a. auch die Content Controls abgeleitet.
+Die für die Darstellung wichtigen Klassen sind `UIElement` und `FrameworkElement`. Davon sind u.a. auch die ContentControls abgeleitet.
 
 ![Bild 1](res/01.jpg)
 
@@ -31,7 +31,7 @@ Jedes Content Control hat eine Eigenschaft _Content_, die vom Typ `Object` ist u
 
 ## HeaderedContentControl
 
-Ein `HeaderedContentControl` ist ein Content Control, dass einen Content-Bereich hat und zusätzlich noch einen Titel-Bereich. Ein solches ist zum Beispiel die `GroupBox`. 
+Ein `HeaderedContentControl` ist ein ContentControl, dass einen Content-Bereich hat und zusätzlich noch einen Titel-Bereich. Ein solches ist zum Beispiel die `GroupBox`. 
 
 ![Bild 2](res/02.jpg)
 
@@ -67,7 +67,7 @@ Es ergibt sich folgendes Layout:
 
 ## Templates 
 
-Content Controls haben per se kein eigenes Aussehen, sondern das Aussehen ergibt sich immer über ein Template. 
+ContentControls haben per se kein eigenes Aussehen, sondern das Aussehen ergibt sich immer über ein Template. 
 
 ### Standardtemplates
 

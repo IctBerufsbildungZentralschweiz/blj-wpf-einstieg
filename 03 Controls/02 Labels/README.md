@@ -1,54 +1,25 @@
-# Buttons
+# Labels
 
-Die von `ContentControl` abgeleitete abstrakte Klasse `ButtonBase` ist die Basisklasse für Buttons. Darin definiert ist u.a. das _Click_-Event, welches überlicherweise gefeuert wird, sobald der Benutzer die Maustaste loslässt, nachdem er einen Button geklickt hat. 
+Ein Label wird üblicherweise dazu verwendet, um TextBoxen mit einem Text zu kennzeichnen, damit der Benutzer weiss, was er in welche TextBox eingeben muss. Die _Focusable_-Property der TextBox ist dabei per Default _false_, wodurch es selbst nicht fokussierbar ist. 
 
+## Einen Access-Key definieren
 
-## Der "normale" Button
+Über ein Label kann ein Tastatur-Zugriffsschlüssel (auch als _Mnemonic_ oder _Access Key_ bezeichnet) definiert werden, indem seiner _Content_-Eigenschaft ein `String` zugewiesen wird und demjenigen Buchstaben des Strings, der als Zugriffsschlüssel dienen soll, ein Unterstrich vorangestellt wird. Drückt der Benutzer die {Alt}-Taste, wird der entsprechende Buchstabe unterstrichen anzeigt und weist den Benutzer so auf den hinterlegten Zugriffschlüssel hin. Klick der Benutzer zusätzlich den entsprechenden Buchstaben, wird der Fokus auf dasjenige UI-Element gelegt, das zum Label gehört. 
 
-Die Klasse `Button` definiert selbst lediglich drei Properties: _IsDefault_, _IsCancel_ und _IsDefaulted_. 
-
-* Ist die Property _IsDefault_ eines Buttons auf _true_ gesestzt, wird beim Drücken der {Enter}-Taste der Click-Event des Buttons gefeuert.  
-
-* Ist die Property _IsCancel_ eines Buttons auf _true_ gesestzt, wird beim Drücken der {Esc}-Taste der Click-Event des Buttons gefeuert.  
-
-* Die dritte in der `Button`-Klasse definierte Eigenschaft _IsDefaulted_ ist read-only. Sie sagt aus, ob das Drücken der {Enter}-Taste den Click-Event auslöst oder nicht. Das heisst: Die _IsDefaulted_-Property eines Buttons ist genau dann _true_, wenn die _IsDefault_-Property _true_ ist UND das Control, auf dem aktuell der Fokus liegt, die {Enter}-Taste nicht akzeptiert. Befindet sich der Mauszeiger z.B. in einer TextBox, die Returns akzeptiert (Eigenschaft _AcceptsReturn_ ist _true_), dann ist die _IsDefaulted_-Property des Default-Buttons _false_.
-
-## Der ToggleButton 
-
-Ein ToggleButton sieht auf den ersten Blick aus wie ein gewöhnlicher Button. Allerdings behält er seinen Status, sobald er geklickt wurde. ToggleButtons sind of in ToolBars zu finden. Beispielsweise enthält Microsoft Word in der ToolBar unter anderem ToggleButtons für _FETT_, _KURSIV_ und _UNTERSTRICHEN_. 
-
-Die Klasse `ToggleButton` ist direkt von `ButtonBase` abgeleitet und definiert die Properties _IsChecked_ und _IsThreeState_. 
-
-* Die _IsChecked_-Property ist nach dem Initialisieren des ToggleButtons per Default _false_. Klickt der Benutzer auf den ToggleButton, besitzt _IsChecked_ den Wert _true_. Klicke der Benutzer ein zweites Mal, besitzt _IsChecked_ wieder den Wert _false_. 8-ung: _IsChecked_ ist nicht vom Typ `bool`, sondern vom Typ `Nullable<bool>`. Das heisst, die Property kann neben _true_ und _false_ auch _null_ sein. 
-
-* Mit _IsThreeState_ kann festgelegt werden, ob der ToggleButton zwei oder drei Status hat.  _IsChecked_ kann nur dann null sein, wenn die per Default auf _false_ gesetzte _IsThreeState_-Property auf _true_ gesetzt wird.
-
-Nebst den beiden Properties _IsChecked_ und _IsThreeState_ definiert die Klasse `ToggleButton` die Events _Checked_ und _Unchecked_. Wie die Namen dieser beiden Events vermuten lassen, tritt _Checked_ auf, wenn _IsChecked_ den Wert _true_ annimmt und _Unchecked_ entsprechend dann, wenn _IsChecked_ auf _false_ gesetzt wird. 
-
-**Hinweis**: Im Gegensatz zum Click-Event feueren die beiden Events _Checked_ und _Unchecked_ auch dann, wenn die _IsChecked_ Property durch C#-Code und nicht durch einen Mausklick gesetzt werden. 
-
-## Der RadioButton 
-
-`RadionButton` ist ein Subklasse von `ToggleButton` und erbt somit sowohl die Properties _IsChecked_ und _IsThreeState_ als auch die Events _Checked_ und _Unchecked_. Dabei besitzt ein RadioButton für alle drei möglichen Status eine eigene visuelle Darstellung (siehe Abbildung) .
-
-![Bild 1](res/01.jpg)
-
-Im Gegensatz zu ToggleButtons werden RadioButtons üblicherweise in Gruppen verwendet. Ein weiterer  Unterschied zum ToggleButton ist, dass der Benutzer einen selektierten RadioButton, der für _IsChecked_ den Wert _true_ hat, durch erneutes Klicken nicht deselektieren kann. Der Benutzer kann lediglich einen anderen RadioButton aus der Gruppe auswählen. RadioButtons werden automatisch gruppiert, wenn sie zum gleichen Elternelement gehören. In einer Gruppe von RadioButtons, kann immer nur genau ein RadioButton selektiert sein. So kann der Benutzer im folgenen Beispiel nur genau eine Farbe auswählen, da die drei RadioButtons Kinder des gleichen StackPanels sind. 
+Um ein UI-Element, das beim Betätigen des Access-Keys fokussiert weden soll, dem entsprechenden Label zuzuweisen, muss es der _Target_-Property des Lables zugewiesen werden. Dazu muss in XAML ein Data Binding eingerichtet werden. 
 
 ```xml
-<StackPanel>
-    <RadioButton Content="Rot" />
-    <RadioButton Content="Grün" />
-    <RadioButton Content="Blau" />
-</StackPanel> 
+<Label Content="_Vorname" Target="{Binding ElementName=tbVorname}" />
+<TextBox Name="tbVorname" Width="120" />
 ```
 
-Um RadioButtons, die zu unterschiedlichen Elternelementen gehören, zu einer Gruppe zusammenzufassen oder um RadioButtons innerhalb des gleichen Elternelements in mehrere Gruppen aufzuteilen, müssen sie mit der _GroupName_-Property explizit gruppiert werden. 
+In C# wird dagegen kein Data Binding benötigt, da die Referenz auf ein Objekt typischerweise in einer Variablen gespeichert ist. Hier genügt es, die Variable der _Target_-Property direkt zuzuweisen. 
 
-## Die CheckBox 
+```csharp
+TextBox tbVorname = new TextBox();
+Label lbl = new Label();
+lbl.Content = "_Vorname";
+lbl.Target = tbVorname; 
+```
 
-Was hat die CheckBox im Kapitel, in dem Buttons vorgestellt werden, verloren? Eine CheckBox verfügt über die drei Zustände "selektiert", "nicht selektiert" und "undefiniert",  was einem ToggleButton entspricht, dessen _IsThreeState_-Property _true_ ist. Folglich ist `CheckBox` von der Klasse `ToggleButton` abgeleitet. Eien CheckBox besitzt lediglich einen anderen Style und ein anderes ControlTemplate als ein ToggleButton und besitzt wie auch die Klasse `RadioButton` für alle drei möglichen Status der _IsChecked_-Property ein visuelles Erscheinungsbild. 
-
-![Bild 2](res/02.jpg)
-
-Während beim RadioButton und beim ToggleButton der Wert _null_ für die _IsChecked_-Eigenschaft selten gebraucht wird, ergibt dies bei der CheckBox in bestimmten Szenarien durchaus Sinn. Zum Beispiel dann, wenn die CheckBox eine Eigenschaft mehrerer Objekte repräsentiert und diese Eigenschaft nicht über alle Objekte gleich ist. Windows nutzt zum Beispiel im Dateieigenschaftsfenster für Eigenschaften wie _read-only_ eine CheckBox. Sind mehrere Dateien markiertt und einige dieser Dateien sind _read-only_ und andere nicht, ist der Wert für _IsChecked_ nicht _true_ oder _false_, sondern _null_.
+Obwohl ein Label einen beliebigen INhalt haben kann, ist es nur dann wirklich nützlich, wenn es einen String mit einem Zugriffsschlüssel enthält. 

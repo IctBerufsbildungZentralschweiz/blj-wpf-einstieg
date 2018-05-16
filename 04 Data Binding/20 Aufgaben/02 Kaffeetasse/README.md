@@ -49,7 +49,7 @@ Als nächstes benötigen wir eine Klasse, die wir als _DataContext_ für das Mai
     List<ImageModel> _imageModels;
     ```
 * ...eine öffentliche Eigenschaft _SelectedValue_ vom Typ `int` besitzt, die an die _Value_-Eigenschaft des Sliders gebunden werden kann.
-* ...eine öffentliche Eigenschaft `SelectedModel` vom Typ `ImageModel` hat, um den _ImagePath_ und den _Typ_ des aktuell durch den Slider selektierten Models an die _Source_-Eigenschaft des Images respektive an die _Text_-Eigenschaft des Textfeldes binden zu können. 
+* ...eine öffentliche Eigenschaft _SelectedModel_ vom Typ `ImageModel` hat, um den _ImagePath_ und den _Typ_ des aktuell durch den Slider selektierten Models an die _Source_-Eigenschaft des Images respektive an die _Text_-Eigenschaft des Textfeldes binden zu können. 
 
     ```CSharp
     public ImageModel SelectedModel

@@ -12,7 +12,7 @@ Erstelle eine WPF-Anwendung mit einem Fenster, auf dem du eine `TextBox` und ein
 
 ### Schritt 2 
 
-Erstelle im XAML-Code ein Binding für die _Text_-Property der TextBox, , sodass die in der ListBox aisgewählte Farbe sofort in der TextBox angezeigt wird. Dazu wird als Datenquelle des Bindings der _Content_ des jeweils gerade ausgewählten Items der ListBox (_SelectedItem.Content_) benötigt. 
+Erstelle im XAML-Code ein Binding für die _Text_-Property der TextBox, welches dafür sorgt, dass die in der ListBox ausgewählte Farbe sofort in der TextBox angezeigt wird. Dazu wird als Datenquelle des Bindings der _Content_ des jeweils gerade ausgewählten Items der ListBox benötigt. 
 
 ```xml 
 <TextBox Text="{Binding ElementName=myListBox, Path=SelectedItem.Content}" />

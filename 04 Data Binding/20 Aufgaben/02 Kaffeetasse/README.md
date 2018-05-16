@@ -1,12 +1,12 @@
-# Die Grösse deiner Kaffeetasse
+# Die Grösse der Kaffeetasse bestimmen
 
 ## Aufgabe 
 
-Erstelle eine Anwendung, mit der ein Kaffeetrinker die Tassengrösse für seinen Kaffee bestimmen kann. Die Anwendung soll Datenbindung beinhalten, sodass sich die Grösse der Kaffeetasse entsprechend dem gewählten Slider-Wert anpasst.
+Erstelle eine Anwendung, mit der ein Kaffeetrinker die Tassengrösse für seinen Kaffee bestimmen kann. Mit einer Datenbindung soll dafür gesorgt werden, dass sich die Grösse der Kaffeetasse dem gewählten Slider-Wert entsprechend anpasst.
 
 ### Schritt 1
 
-Erstelle eine Oberfläche, die wie folgt aussieht. 
+Erstelle mit XAML eine Oberfläche, die wie folgt aussieht. 
 
 ![Bild 1](res/01.jpg)
 
@@ -21,7 +21,7 @@ Die Bilder, die du für die Aufgabe benötigst, findest du hier:
 
 Mit dem Slider soll die Tassengrösse verändert werden können. Wenn der Slider nach rechts bewegt wird, soll die Tasse (das Bild) grösser werden. Binde dazu die Elemente und Eigenschaften direkt aneinander (Elementbindung). 
 
-Der Slider hat eine  _Maximum_- und _Minimum_-Eigenschaft sowie eine _Value_-Eigenschaft, die den aktuellen Slider-Wert angibt. 
+**Hinweis**: Der Slider hat eine  _Maximum_- und _Minimum_-Eigenschaft sowie eine _Value_-Eigenschaft, die den aktuellen Slider-Wert angibt. 
 
 ### Schritt 3 
 
@@ -60,15 +60,19 @@ Als nächstes benötigen wir eine Klasse, die wir als _DataContext_ für das Mai
 
 #### Klassendiagramm
 
+Das Klassendiagramm zeigt die Struktur der beiden zu erstellenden Klassen, sowie deren Beziehung zu einander. 
+
 ![Bild 1](res/02.jpg)
 
 ### Schritt 4 
 
 Verknüpfe das ViewModel mit der View indem du zunächst den _DataContext_ deines Windows auf eine neue Instanz des ViewModels setzst und danach das DataBinding im XAML-Code einrichtest. 
 
-Binde mit XAML die _Value_-Eigenschaft des Sliders an die _SelectedValue_-Eigenschaft des ViewModels, die _Source_-Eigenschaft des Images an die _ImagePath_-Eigenschaft des aktuell selektierten ImageModels und die _Text_-Eigenschaft des Textfeldes an die _Typ_-Eigenschaft des aktuell selektierten ImageModels. 
+Binde dazu die _Value_-Eigenschaft des Sliders an die _SelectedValue_-Eigenschaft des ViewModels, die _Source_-Eigenschaft des Images an die _ImagePath_-Eigenschaft des aktuell selektierten ImageModels und die _Text_-Eigenschaft des Textfeldes an die _Typ_-Eigenschaft des aktuell selektierten ImageModels. 
 
 ### Die fertige Anwendung  
+
+Hier ein Bild der fertigen Anwendung. Es zeigt die Auswahl der kleinsten Tasse. 
 
 ![Bild 1](res/03.jpg)
 

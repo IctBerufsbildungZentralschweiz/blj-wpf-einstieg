@@ -13,6 +13,22 @@ Die Klasse `Button` definiert selbst lediglich drei Properties: _IsDefault_, _Is
 
 * Die dritte in der `Button`-Klasse definierte Eigenschaft _IsDefaulted_ ist read-only. Sie sagt aus, ob das Drücken der {Enter}-Taste den Click-Event auslöst oder nicht. Das heisst: Die _IsDefaulted_-Property eines Buttons ist genau dann _true_, wenn die _IsDefault_-Property _true_ ist UND das Control, auf dem aktuell der Fokus liegt, die {Enter}-Taste nicht akzeptiert. Befindet sich der Mauszeiger z.B. in einer TextBox, die Returns akzeptiert (Eigenschaft _AcceptsReturn_ ist _true_), dann ist die _IsDefaulted_-Property des Default-Buttons _false_.
 
+Die _Content_-Eigenschaft eines Buttons ist vom Typ `Object`. Damit sind der Gestaltung eines Buttons (fast) keine Grenzen gesetzt. Zum Beispiel kann der Button ein StackPanel enthalten, worin ein Bild und ein TextBlock platziert sind. 
+
+```xml
+<Button>
+    <StackPanel>
+        <Image Source="res/download.png" Height="28"></Image>
+        <TextBlock>Download</TextBlock>
+    </StackPanel>
+</Button>
+```
+
+Dies ergibt einen Button mit einem Bild und darunter stehendem Text. 
+
+![Bild 0](res/00.jpg)
+
+
 ## Der ToggleButton 
 
 Ein ToggleButton sieht auf den ersten Blick aus wie ein gewöhnlicher Button. Allerdings behält er seinen Status, sobald er geklickt wurde. ToggleButtons sind of in ToolBars zu finden. Beispielsweise enthält Microsoft Word in der ToolBar unter anderem ToggleButtons für _FETT_, _KURSIV_ und _UNTERSTRICHEN_. 

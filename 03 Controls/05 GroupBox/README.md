@@ -1,8 +1,8 @@
 # Gruppieren mit der GroupBox
 
-Die `GroupBox` wird verwendet, um zusammengehörende Controls zu gruppieren und ist damit ein wichtiges Werkzeug für die übersichtliche Strukturierung von grafischen Benutzeroberflächen. 
+Die `GroupBox` wird verwendet, um zusammengehörende Controls zu gruppieren und ist damit ein wichtiges Werkzeug für die übersichtliche Strukturierung und Gestaltung von grafischen Benutzeroberflächen. 
 
-Die GroupBox ist abgleitet von `HeaderedContentControl` und besitzt als solches nebst dem einen Content-Bereich mit der Property _Header_ zusätzlich noch einen Titel-Bereich. Wie die Content-Eigenschaft ist auch die Header-Eigenschaft vom Typ Object. Das heisst, wir können dem Header-Bereich ein beliebiges Element zuordnen. 
+Die GroupBox ist abgeleitet von `HeaderedContentControl` und besitzt als solches nebst einen Content-Bereich mit der Property _Header_ zusätzlich noch einen Titel-Bereich. Wie die Content-Eigenschaft ist auch die Header-Eigenschaft vom Typ `Object`. Das heisst, wir können dem Header-Bereich ein beliebiges Element zuordnen. 
 
 Im folgenden Beispiel wurde im Header-Bereich ein Layout Container (ein StackPanel) platziert und darin wiederum ein rot ausgefülltes Rectangle sowie ein TextBlock.
 

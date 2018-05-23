@@ -29,4 +29,10 @@ Anstelle eines Strings lassen sich der _ToolTip_-Property aber auch komplexe Obj
 
 ![Bild 2](res/02.jpg)
 
-Die `ToolTip`-Klasse bietet viele weitere Eigenschaften. Beispielsweise Eigenschaften zum Positionieren des ToolTips: _HorizontalOffset_, _VerticalOffset_, _Placement_. Mit _IsOpen_ kann kontrolliert werden, ob der ToolTip anzeigt wird: diese Eigenschaft kann auf _false_ gesetzt werden, um einen ToolTip "manuell" zu schliessen. Über die Eigenschaft _HasDropShadow_ kann ein Schatten angezeigt werden. Und überwacht werden kann der ToolTip mit den beiden Events _Opened_ und _Closed_.  
+Die `ToolTip`-Klasse bietet viele weitere Eigenschaften, z.B.:  
+
+* Positionieren des ToolTips: _HorizontalOffset_, _VerticalOffset_, _Placement_. 
+* Mit _IsOpen_ kann kontrolliert werden, ob der ToolTip anzeigt wird. Um einen ToolTip "manuell" zu schliessen, kann diese Eigenschaft auf _false_ gesetzt werden. 
+* Mittels _HasDropShadow_ kann ein Schatten angezeigt werden. 
+
+Überwacht werden kann der ToolTip mit den beiden Events _Opened_ und _Closed_.  

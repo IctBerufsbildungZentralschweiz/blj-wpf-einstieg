@@ -37,14 +37,6 @@ Das folgende Beispiel zeigt die Verwendung der Spans `Bold`, `Italic`, `Underlin
 
 ![Bild 2](res/02.jpg)
 
-Aufgrund der Tatsache, dass die `Span`-Klasse selber eine `Inlines`-Property besitzt, können Span-Elemente beliebig verschachtelt werden. 
-
-```xml
-<Bold>Ge</Bold><Italic>mi</Italic><Underline>scht</Underline> <Hyperlink>formatiert.</Hyperlink>
-```
-
-![Bild 3](res/03.jpg)
-
 ### Das Inline-Element "Run"
 
 Um die im obigen Beispiel in XAML definierte Textausgabe mit C# zu erstellen, muss jedes `Span` in ein `Run`-Objekt gepackt werden. Objekte vom Typ `Run` sind die einzigen Inline-Objekte, welche den eigentlichen Text enthalten können. 
@@ -58,6 +50,16 @@ tBlock.Inlines.Add(new Underline(new Run("Unterstrichen.")));
 tBlock.Inlines.Add(new Run(" "));
 tBlock.Inlines.Add(new Hyperlink(new Run("Hyperlink.")));
 ```
+
+### Verschacheln von Span-Elementen
+
+Aufgrund der Tatsache, dass die `Span`-Klasse selber eine `Inlines`-Property besitzt, können Span-Elemente beliebig verschachtelt werden. 
+
+```xml
+<Underline><Bold>Gemi</Bold><Italic>scht</Italic> formatierter</Underline> <Hyperlink>Text</Hyperlink>.
+```
+
+![Bild 3](res/03.jpg)
 
  ## Formatierung mit den Properties der TextElement-Klasse
 
@@ -89,7 +91,7 @@ Diese _FontXXX_-Properties sind WPF-intern als Attached Properties implementiert
     <TextBlock>Formatierter Text.</TextBlock>
 </StackPanel>
 ```
-### InlineUIContainer
+## InlineUIContainer
 
 Mit der Klasse `InlineUIContainer` lassen sich beliebige UIElemente (z.B. Images) in einen Text integrieren.
 

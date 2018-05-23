@@ -4,11 +4,11 @@ Die Klasse `TextBox` erbt von der Klasse `TextBoxBase`, die wiederum direkt von 
 
 ## Text eingeben und editieren 
 
-Nebst der wohl wichtigsten Eigenschaft _Text_, die den vom Benutzer eingegebenen Text entgegennimmt, bietet die TextBox viele nützliche Properties zum Editieren von Text.  
+Nebst der wohl wichtigsten Eigenschaft _Text_, die den vom Benutzer eingegebenen Text entgegennimmt, bietet die TextBox viele weitere nützliche Properties.  
 
 * **_TextWrapping_** - legt fest, wie der Text innerhalb der TextBox umbrochen werden soll (mögliche Werte: _NoWrap_, _Wrap_, _WrapWithOverflow_).
 * **_AcceptsReturn_** - legt fest, ob der Benutzer mit der {ENTER}-Taste ein Zeilenumbruch einfügen kann.
-* **_AcceptsTab_** - - legt fest, ob der Benutzer mit der {TAB}-Taste ein Tabstoppzeichen einfügen kann.
+* **_AcceptsTab_** - legt fest, ob der Benutzer mit der {TAB}-Taste ein Tabstoppzeichen einfügen kann.
 * **_CanUndo_** - legt fest, ob der Benutzer die vorhergehende Eingabe rückgängig machen kann.
 * **_IsUndoEnabled_** - legt fest, ob der Undo-Mechanismus eingeschaltet ist oder nicht. 
 * **_UndoLimit_**  - legt maximale Grösse des Undo-Stacks fest. 
@@ -30,7 +30,7 @@ tBox.SelectionLength = 12;
 
 ![Bild 1](res/01.jpg)
 
-Das gleiche lässt sich freilich auch durch Aufruf der Methode _Select_ erreichen: 
+Das Gleiche lässt sich freilich auch durch Aufruf der Methode _Select_ erreichen: 
 
 ```csharp
 tBox.Focus();
@@ -38,7 +38,7 @@ tBox.Select(4, 12);
 ```
 ## Rechtschreibprüfung
 
-Mit der Attached Property _SpellCheck.IsEnabled_ kann für die TextBox die Rechtschreibprüfung aktiviert werden. Falsch geschriebene Wörter werden dann rot unterstrichen und über das Kontextmenu der Maus werden Korrekturen vorgeschlagen. 
+Mit der Attached Property _SpellCheck.IsEnabled_ kann für eine TextBox die Rechtschreibprüfung aktiviert werden. Falsch geschriebene Wörter werden dann rot unterstrichen und über das Kontextmenu der Maus werden Korrekturen vorgeschlagen. 
 
 ```xml
  <TextBox SpellCheck.IsEnabled="True">Das Wort falch ist falsch.</TextBox>

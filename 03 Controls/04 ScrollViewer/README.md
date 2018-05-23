@@ -10,7 +10,9 @@ Die wichtisten Properties der Klasse `ScrollViewer` sind _HorizontalScrollBarVis
 
 * **Hidden**:  Die ScrollBar wird nicht anzeigt. Allerdings läuft der Inhalt des dem ScrollViewer zugewiesenen Elements  über die verfügbare Anzeige-Fläche hinaus, da die _Width_- und die _Height_-Property des Inhalts nicht wie bei _Disabled_ der zur Verfügung stehenden Anzeige-Fläche angepasst wird.  
 
-* **Visible**: Die ScrollBlar wird immer angezeigt, auch dann, wenn die verfügbare Anzeige-Fläche gross genug ist, um den Inhalt ohne scrollen zu müssen anzeigen zu können. 
+* **Visible**: Die ScrollBlar wird immer angezeigt, auch dann, wenn die verfügbare Anzeige-Fläche eigentlich gross genug wäre, um den Inhalt ohne Scrolling anzeigen zu können. 
+
+Im folgenden Beispiel wird die vertikale Scrollbar immer angezeigt. Die horizontale Scrollbar dagegen wird nie angezeigt. Durch den Wert _Disabled_ für _HorizontalScrollBarVisibility_ wird erreicht, dass die Width-Property des dem ScrollViewer zugewiesenen StackPanels automatisch auf die Breite der zur Verfügung stehenden Fläche gesetzt wird. Den TextBlock-Objekten steht somit auch nur die sichtbare Breite zur Verfügung, wodurch ihr Text umbrochen wird. 
 
 ```xml
 <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled">
@@ -24,9 +26,5 @@ Die wichtisten Properties der Klasse `ScrollViewer` sind _HorizontalScrollBarVis
         </StackPanel>
     </ScrollViewer>
 ```  
-
-Im diesem Beispiel wird die vertikale Scrollbar immer angezeigt  während die horizontale Scrollbar nie angezeigt wird. Durch den Wert _Disabled_ für _HorizontalScrollBarVisibility_ wird erreicht, dass die Width-Property des dem ScrollViewer zugewiesenen StackPanels automatisch auf die Breite der zur Verfügung stehenden Fläche gesetzt wird. Den TextBlock-Objekten steht somit auch nur die sichtbare Breite zur Verfügung, wodurch ihr Text umbrochen wird. 
-
-
 
 ![Bild 1](res/01.jpg)

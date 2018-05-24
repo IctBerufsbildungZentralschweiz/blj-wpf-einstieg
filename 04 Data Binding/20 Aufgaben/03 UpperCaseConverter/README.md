@@ -8,8 +8,6 @@ Platziere unterhalb der beiden  Eingabefelder ein _TextBlock_- oder ein _Label_-
 
 ![Bild 1](res/01.jpg)
 
-### Todo 
-
 Orientiere dich bei der Umsetzung der Aufgabe an der folgenden Todo-Liste. 
 
 - [ ] Das GUI (MainWindow) mit XAML erstellen/designen.
@@ -17,9 +15,9 @@ Orientiere dich bei der Umsetzung der Aufgabe an der folgenden Todo-Liste.
 - [ ] Den _DataContext_ des MainWindow setzen.
 - [ ] Das Data Binding für die Eingabefelder einrichten. 
 - [ ] Über die _UpdateSourceTrigger_-Eigenschaft steuern, dass der volle Name der Person "live", d.h. während der Benutzer Vor- und Nachname eintippt, aktualisiert wird. 
-- [ ] Die `UpperCaseConverter`-Klasse programmieren, die das Interface `IValueConverter` implementiert und die dazu  verwendet werden kann, einen Text in Grossbuchstaben umzuwandeln.
+- [ ] Eine Konverter-Klasse namens `UpperCaseConverter` erstellen; sie muss das Interface `IValueConverter` implementieren und soll dazu  verwendet werden, einen Text in Grossbuchstaben umzuwandeln.
 - [ ] Die Konverter-Klasse im MainWindow als Ressource einbinden.
-- [ ] Die Konverter-Klasse gemäss Aufgabenstelltung verwenden.
+- [ ] Die Konverter-Klasse gemäss Aufgabenstellung verwenden.
 
 ## Zusatzaufgabe
 

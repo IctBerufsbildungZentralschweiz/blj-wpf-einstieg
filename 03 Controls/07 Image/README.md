@@ -41,7 +41,7 @@ Dazu erstellen wir ein Verzeichnis für die Bilder und integrieren es wie folgt 
 
     ![Bild 4](res/04.jpg)
 
-3. Die Bilder sind nun Resource im Projekt integriert und können über das Properties-Window der Source-Eigenschaft des Images zugewiesen werden. 
+3. Die Bilder sind nun als _Resource_ im Projekt integriert und können im Properties-Window ausgewählt und der Source-Eigenschaft des Image zugewiesen werden. 
 
     ![Bild 5](res/05.jpg)
 
@@ -56,3 +56,5 @@ Um die exe-Datei klein zu halten, können Dateien alternativ als _Content_ einge
 Die Bilder aus dem Beispiel oben können im Properties-Window als _Content_-Files definiert werden. Dazu werden die Bilder im Solution Explorer mit der Maus markiert  und im Properties-Window die Build Action auf _Content_ gesetzt. Ausserdem sollten die Bilder ins Output-Directory kopiert werden. Die entsprechende Einstellung ist _Copy always_ (oder: _Copy if newer_).
 
 ![Bild 6](res/06.jpg)
+
+> Mehr Informationen: [WPF Application Resource, Content, and Data Files](https://docs.microsoft.com/en-us/dotnet/framework/wpf/app-development/wpf-application-resource-content-and-data-files)

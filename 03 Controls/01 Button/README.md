@@ -1,4 +1,4 @@
-# Buttons
+# Buttons verwenden
 
 Die von `ContentControl` abgeleitete abstrakte Klasse `ButtonBase` ist die Basisklasse für Buttons. Darin definiert ist u.a. das _Click_-Event, welches überlicherweise gefeuert wird, sobald der Benutzer die Maustaste loslässt, nachdem er einen Button geklickt hat. 
 

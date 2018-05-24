@@ -1,4 +1,4 @@
-# Labels
+# Das Label
 
 Ein Label wird üblicherweise dazu verwendet, um TextBoxen mit einem Text zu kennzeichnen, damit der Benutzer weiss, was er in welche TextBox eingeben muss. Die _Focusable_-Property des Labels ist dabei per Default _false_, wodurch es selbst nicht fokussierbar ist. 
 

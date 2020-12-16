@@ -1,0 +1,42 @@
+﻿<Window x:Class="CheckBox_und_RadioButton.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CheckBox_und_RadioButton"
+        mc:Ignorable="d"
+        Title="CheckBox und RadioButton" Height="403" Width="350" FontSize="14" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="DefaultGroupBoxStyle" TargetType="GroupBox">
+            <Setter Property="Margin" Value="5, 5" />
+            <Setter Property="Padding" Value="5, 10" />
+        </Style>
+    </Window.Resources>
+
+    <StackPanel Name="container">
+        <GroupBox Header="Deine Lieblingsfarbe" Style="{DynamicResource DefaultGroupBoxStyle}">
+            <StackPanel>
+                <RadioButton Content="Rot" Name="rbRot" Command="{Binding RadioButtonSelectedCommand}" CommandParameter="{Binding ElementName=rbRot, Path=Content}" />
+                <RadioButton Content="Grün" Name="rbGruen" />
+                <RadioButton Content="Blau" Name="rbBlau" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Dein Lieblingstier" Style="{DynamicResource DefaultGroupBoxStyle}">
+            <StackPanel>
+                <RadioButton Content="Hund" Name="rbHund" />
+                <RadioButton Content="Katze" Name="rbKatze" />
+                <RadioButton Content="Maus" Name="rbMaus" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Deine Hobbies" Style="{DynamicResource DefaultGroupBoxStyle}">
+            <StackPanel>
+                <CheckBox Content="Kino" Name="chkKino" />
+                <CheckBox Content="Lesen" Name="chkLesen"/>
+                <CheckBox Content="Sport" Name="chkSport"/>
+            </StackPanel>
+        </GroupBox>
+        <DockPanel>
+            <Button Content="Anzeigen" Width="85" Click="Button_Click" />
+        </DockPanel>
+    </StackPanel>
+</Window>

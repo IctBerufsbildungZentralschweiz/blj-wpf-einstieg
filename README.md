@@ -1,3 +1,3 @@
 # Work in progress
 
-Theorie, Beispiele und Aufgaben für den Einstieg in die WPF.
+Musterlösungen zu den Aufgaben.

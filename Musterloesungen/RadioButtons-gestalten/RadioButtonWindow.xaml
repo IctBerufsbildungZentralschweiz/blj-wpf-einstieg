@@ -1,0 +1,40 @@
+﻿<Window x:Class="RadioButtons_gestalten.RadioButtonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RadioButtons_gestalten"
+        mc:Ignorable="d"
+        Title="RadioButton-Beispiel" Height="165.408" Width="348" FontSize="20" WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <GroupBox Margin="5">
+            <GroupBox.Header>
+                <TextBlock Text="Are you ready?" Padding="0, 2"/>
+            </GroupBox.Header>
+            <StackPanel>
+                <RadioButton VerticalContentAlignment="Center">
+                    <!-- Ein RadioButton ist ein ContentControl und so kann an seine Content-Eigenschaft 
+                         ein Element beliebigen Typs zugewiesen werden, hier z.B. ein Layout-Container (StackPanel).
+                         Dies erlaubt es, einen Button individuel zu gestalten. 
+                    -->
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="res/smiley.png" Width="17" />
+                        <TextBlock Text="Yes"  Margin="5, 0" Foreground="Green" />
+                    </StackPanel>
+                </RadioButton>
+                <RadioButton VerticalContentAlignment="Center" Foreground="Red">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="res/frown-face.png" Width="17" />
+                        <TextBlock Text="No"  Margin="5, 0" />
+                    </StackPanel>
+                </RadioButton>
+                <RadioButton VerticalContentAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="res/question-mark.png" Width="17" />
+                        <TextBlock Text="Maybe" Margin="5, 0" Foreground="Gray"/>
+                    </StackPanel>
+                </RadioButton>
+            </StackPanel>
+        </GroupBox>
+    </StackPanel>
+</Window>

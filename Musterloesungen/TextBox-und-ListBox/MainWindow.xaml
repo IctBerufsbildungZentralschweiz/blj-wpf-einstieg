@@ -1,0 +1,33 @@
+﻿<Window x:Class="TextBox_und_ListBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextBox_und_ListBox"
+        mc:Ignorable="d"
+        Title="TextBox und ListBox" Height="275" Width="425" FontSize="14" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="28" />
+            <RowDefinition Height="28" />
+        </Grid.RowDefinitions>
+        <DockPanel LastChildFill="True">
+            <Label Content="Text:"  />
+            <Button Name="AddButton" Content="Hinzufügen" DockPanel.Dock="Right" Width="85" IsDefault="True" Click="AddButton_Click" TabIndex="1" />
+            <TextBox Name="InputTextBox" Margin="5,0" Height="25" TabIndex="0"/>
+        </DockPanel>
+        <DockPanel Grid.Row="1">
+            <ListBox Name="ViewItemsListBox" Margin="0, 5" TabIndex="2" SelectionChanged="ViewItemsListBox_SelectionChanged"/>
+        </DockPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Label Content="aktuelle Auswahl: " />
+            <TextBlock Name="SelectedItemTextBlock" Text="{Binding SelectedItem}" Margin="0, 5" Foreground="#FF3DB7EA" />
+        </StackPanel>
+        <DockPanel Grid.Row="3" HorizontalAlignment="Right">
+            <Button Name="ClearButton" Content="Leeren" Width="85" IsCancel="True" Margin="10,0 " Click="ClearButton_Click" TabIndex="3" />
+            <Button Name="CancelButton" Content="Abbrechen" DockPanel.Dock="Right" Width="85" IsCancel="True" Click="CancelButton_Click" TabIndex="4" />
+        </DockPanel>
+    </Grid>
+</Window>

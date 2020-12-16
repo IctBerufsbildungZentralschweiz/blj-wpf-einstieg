@@ -1,0 +1,14 @@
+﻿<Window x:Class="Texte_darstellen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Texte_darstellen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="189.927" Width="340.789">
+    <Grid>
+        <TextBlock FontSize="20" Margin="10, 20, 0, 50">
+            <Hyperlink NavigateUri="http://www.ict-bz.ch" Click="Link_Click">ICT-Berufsbildung Zentralschweiz</Hyperlink>
+        </TextBlock>
+    </Grid>
+</Window>
